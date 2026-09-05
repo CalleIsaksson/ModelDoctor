@@ -2,6 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import pipeline
 import torch
 
+
 model_id = "meta-llama/Llama-3.2-1B-Instruct"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -48,3 +49,51 @@ tokenized = tokenizer.apply_chat_template(
 out = model.generate(**tokenized.to(device), max_new_tokens=40)
 decoded = tokenizer.batch_decode(out)
 print(decoded[0])
+
+
+
+SYSTEM_PROMPT = """
+You are ModelDoctor, an assistant that diagnoses machine-learning training problems.
+
+Use only the supplied training metrics and configuration.
+
+The diagnosis must be one of:
+- healthy
+- overfitting
+- underfitting
+- learning_rate_too_high
+- learning_rate_too_low
+- data_leakage_suspected
+- insufficient_evidence
+
+Answer using:
+Diagnosis:
+Evidence:
+Next experiment:
+"""
+
+USER_TEMPLATE = """
+Analyze this training run.
+
+Model: {model_name}
+Task: {task}
+Train loss: {train_loss}
+Validation loss: {validation_loss}
+Train metric: {train_metric}
+Validation metric: {validation_metric}
+Learning rate: {learning_rate}
+Epochs: {epochs}
+Additional information: {additional_information}
+"""
+
+user_content = USER_TEMPLATE.format(
+    model_name=row["model_name"],
+    task=row["task"],
+    train_loss=row["train_loss"],
+    validation_loss=row["validation_loss"],
+    train_metric=row["train_metric"],
+    validation_metric=row["validation_metric"],
+    learning_rate=row["learning_rate"],
+    epochs=row["epochs"],
+    additional_information=row["additional_information"]
+)
