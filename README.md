@@ -14,3 +14,6 @@ The training dataset will consist of structured examples derived from published 
 - Implemented tokenization
 - Applied Llama's chat template
 - Generated a response from the model
+- Have imported data from a large dataset of machine-learning training results
+- Have created an initial labeling guide for the diagnoses the model will later learn to identify
+- Have started defining the CSV structure for labeled training examples

@@ -1,0 +1,1 @@
+model_name,task,train_loss,validation_loss,train_metric,validation_metric,learning_rate,epochs,additional_information,diagnosis,evidence,next_experiment
