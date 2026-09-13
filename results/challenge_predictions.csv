@@ -1,0 +1,64 @@
+example_id,expected_diagnosis,predicted_diagnosis,correct,format_ok,answer
+challenge_overfitting_01,overfitting,healthy,False,True,"Diagnosis: healthy
+Evidence: Across 7 epochs, training loss decreased from 0.910 to 0.120 and validation loss decreased from 0.960 to 0.079. The final training and validation metrics remained close at 0.980 and 0.710.
+Next experiment: Repeat the run with another random seed to check that the result is reproducible."
+challenge_overfitting_02,overfitting,learning_rate_too_high,False,True,"Diagnosis: learning_rate_too_high
+Evidence: Training remained poor after 8 epochs: training loss was 0.760 and training metric was 0.760. Validation values were similarly poor at 0.760 loss and 0.760 metric.
+Next experiment: Lower the learning rate by about 10x and run the same experiment again."
+challenge_overfitting_03,overfitting,data_leakage_suspected,False,True,"Diagnosis: data_leakage_suspected
+Evidence: Validation loss reached its lowest value of 0.630 at epoch 4, then increased to 0.960, while training loss continued decreasing to 0.150.
+Next experiment: Create a new clean seed and evaluate the same configuration on an untouched holdout set."
+challenge_underfitting_01,underfitting,data_leakage_suspected,False,True,"Diagnosis: data_leakage_suspected
+Evidence: Validation metric reached its lowest value of 0.270 at epoch 1, then increased to 0.430, while training metric remained close to 0.450.
+Next experiment: Create a new clean split before training, remove the leakage source, and evaluate the same configuration on an untouched holdout set."
+challenge_underfitting_02,underfitting,underfitting,True,True,"Diagnosis: underfitting
+Evidence: Validation loss reached its lowest value of 1.880 at epoch 4, then increased to 1.888, while training loss continued decreasing to 1.170.
+Next experiment: Increase the epoch budget by about 10x and run the same experiment again."
+challenge_underfitting_03,underfitting,insufficient_evidence,False,True,"Diagnosis: insufficient_evidence
+Evidence: Training and validation results remain weak after 7 epochs: training loss is 1.11, validation loss is 1.16, training metric is 0.54, validation metric is 0.52.
+Next experiment: Increase the epoch count by about 10x and run the same experiment again."
+challenge_lr_high_01,learning_rate_too_high,learning_rate_too_high,True,True,"Diagnosis: learning_rate_too_high
+Evidence: Gradient norms repeatedly jumped from 0.0001 to 0.111 and from 0.111 to 0.111 directly after each optimizer step.
+Next experiment: Lower the learning rate by about 10x and run the same experiment again."
+challenge_lr_high_02,learning_rate_too_high,learning_rate_too_high,True,True,"Diagnosis: learning_rate_too_high
+Evidence: Training loss repeatedly jumped from 1.620 at epoch 1 to 0.940 at epoch 2 and from 2.870 at epoch 3 to 1.210 at epoch 4, with no stable downward trend.
+Next experiment: Lower the learning rate by about 10x and run the same experiment again."
+challenge_lr_high_03,learning_rate_too_high,underfitting,False,True,"Diagnosis: underfitting
+Evidence: Validation loss reached its lowest value of 1.060 at epoch 4, then increased to 5.430, while training loss continued decreasing to 0.018.
+Next experiment: Increasing the batch size by about 10x should remove the repeated oscillations."
+challenge_lr_low_01,learning_rate_too_low,insufficient_evidence,False,True,"Diagnosis: insufficient_evidence
+Evidence: Training remained stable across 12 epochs, but validation improvements were only 0.042.
+Next experiment: Increase the budget by about 10x and run the same experiment again."
+challenge_lr_low_02,learning_rate_too_low,learning_rate_too_low,True,True,"Diagnosis: learning_rate_too_low
+Evidence: Training loss decreases consistently by only 0.058, from 2.012 to 1.964, across 10 epochs, while the training metric improves by only 0.033.
+Next experiment: Increase the learning rate by about 10x and run the same experiment again."
+challenge_lr_low_03,learning_rate_too_low,learning_rate_too_high,False,True,"Diagnosis: learning_rate_too_high
+Evidence: Training loss repeatedly jumped from 0.842 at epoch 1 to 0.838 at epoch 2 and from 0.834 at epoch 3 to 0.830 at epoch 4, with no stable downward trend.
+Next experiment: Lower the learning rate by about 10x and run the same experiment again."
+challenge_healthy_01,healthy,healthy,True,True,"Diagnosis: healthy
+Evidence: Across 6 epochs, training loss decreased from 1.16 to 0.250 and validation loss decreased from 1.20 to 0.250. The final training and validation metrics remained close at 0.950 and 0.920.
+Next experiment: Repeat the run with another random seed to check that the result is reproducible."
+challenge_healthy_02,healthy,learning_rate_too_low,False,True,"Diagnosis: learning_rate_too_low
+Evidence: Validation loss reached its lowest value of 0.270 at epoch 1, then increased to 0.920, while training loss continued decreasing to 0.060.
+Next experiment: Increase the learning rate by about 10x and run the same experiment again."
+challenge_healthy_03,healthy,insufficient_evidence,False,True,"Diagnosis: insufficient_evidence
+Evidence: Validation loss reached its lowest value of 0.320 at epoch 6, then increased to 0.910, while training loss continued decreasing to 0.039.
+Next experiment: Run the experiment again with a higher learning rate by about 10x and evaluate the same split again."
+challenge_leakage_01,data_leakage_suspected,data_leakage_suspected,True,True,"Diagnosis: data_leakage_suspected
+Evidence: The 1842 customer IDs found in both splits are present in the training pipeline. Validation metric was 1.000, but the leakage is likely causing the training metric to be 0.990.
+Next experiment: Create a new clean split before preprocessing, remove the leakage source, and evaluate the same configuration on an untouched holdout set."
+challenge_leakage_02,data_leakage_suspected,data_leakage_suspected,True,True,"Diagnosis: data_leakage_suspected
+Evidence: Preprocessing was fitted before the split, so validation information entered the training pipeline. Validation metric was 0.97, compared with 0.94 in training.
+Next experiment: Create a new clean split before preprocessing, remove the leakage source, and evaluate the same configuration on an untouched holdout set."
+challenge_leakage_03,data_leakage_suspected,data_leakage_suspected,True,True,"Diagnosis: data_leakage_suspected
+Evidence: Validation metric fell from 0.990 to 0.710 on a newly deduplicated holdout set, while training metric remained close to 1.000.
+Next experiment: Create a new clean split before preprocessing, remove leakage sources, and evaluate the same configuration on an untouched holdout set."
+challenge_insufficient_01,insufficient_evidence,insufficient_evidence,True,True,"Diagnosis: insufficient_evidence
+Evidence: Only the first epoch is complete, so no training or validation trend can be established.
+Next experiment: Continue training for more epochs and evaluate the same configuration on another random split."
+challenge_insufficient_02,insufficient_evidence,insufficient_evidence,True,True,"Diagnosis: insufficient_evidence
+Evidence: Validation loss is missing, so generalization cannot be compared with training performance.
+Next experiment: Run the validation job again with validation loss logging enabled."
+challenge_insufficient_03,insufficient_evidence,insufficient_evidence,True,True,"Diagnosis: insufficient_evidence
+Evidence: Only two epochs are available and both training and validation metrics are close, but the final metric is off by about 0.100.
+Next experiment: Configure the experiment with more epochs and log both training and validation metrics before and after training."

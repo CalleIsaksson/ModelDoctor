@@ -1,0 +1,527 @@
+example_id,expected_diagnosis,predicted_diagnosis,correct,format_ok,answer
+synthetic_v2_learning_rate_too_low_007,learning_rate_too_low,overfitting,False,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in the loss values over epochs, indicating that the model is not overfitting.
+2. The train metric values are relatively high, indicating that the model is not underfitting.
+3. The validation metric values are also relatively high, indicating that the model is not overfitting.
+4. The learning rate is 4.1e-06, which is a relatively low learning rate, indicating that the model is not overfitting.
+
+**Next experiment:**
+
+To further investigate the model's behavior, I would recommend the following next experiment:
+
+* Reduce the learning rate to 1"
+synthetic_v2_underfitting_020,underfitting,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are decreasing over time, indicating that the model is learning to fit the training data.
+2. The train metric values are increasing, indicating that the model is overfitting.
+3. The validation metric values are also increasing, but not as much as the train metric values.
+4. The learning rate is 0.001642, which is relatively low. A low learning rate can contribute to overfitting.
+5. The number of epochs is 9, which is a relatively large number. A larger number of epochs can lead to overfitting.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend"
+synthetic_v2_underfitting_026,underfitting,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The training loss values are decreasing over time, indicating a decrease in the model's error.
+2. The validation loss values are also decreasing, but not as significantly as the training loss values.
+3. The train metric values are increasing, indicating an increase in the model's error.
+4. The validation metric values are not decreasing, which is a sign of overfitting.
+5. The learning rate is 0.002613, which is relatively high, indicating that the model is not learning at a sufficient rate.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Reduce the learning rate to 0"
+synthetic_v2_data_leakage_suspected_017,data_leakage_suspected,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in loss after each epoch, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is overfitting to the training data.
+3. The validation metric values are lower than the train metric values, indicating that the model is overfitting to the validation data.
+4. The performance dropped to 0.66 when split by document, indicating that the model is overfitting to the source documents.
+
+**Next experiment:**
+
+To further investigate the overfitting issue, I would recommend the following next experiment:
+
+1. Reduce the number of epochs:"
+synthetic_v2_underfitting_017,underfitting,overfitting,False,True,"Based on the provided training metrics and configuration, here's the diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The training loss values are decreasing over time, indicating a decrease in the model's error.
+2. The validation loss values are also decreasing, indicating a decrease in the model's error on the test set.
+3. The training metric values are high, indicating that the model is overfitting.
+4. The validation metric values are also high, indicating that the model is overfitting.
+
+**Next experiment:**
+
+To further investigate the overfitting issue, I recommend the following next experiment:
+
+1. Reduce the learning rate to 0.0025.
+2. Increase the number of epochs to 12.
+3. Add more data augmentation settings to the"
+synthetic_v2_insufficient_evidence_029,insufficient_evidence,overfitting,False,True,"Based on the provided training metrics and configuration, here's a diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are decreasing over time, indicating that the model is learning to fit the training data more closely.
+2. The train metric values are increasing, indicating that the model is overfitting.
+3. The validation loss and metric values are missing, which suggests that the model is not performing well on the validation set.
+4. The learning rate is 0.001, which is relatively low and suggests that the model is not overfitting due to a high learning rate.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Increase the number of epochs to 7 or 8"
+synthetic_v2_learning_rate_too_high_023,learning_rate_too_high,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a significant increase in loss values after the 6th epoch, indicating a rapid increase in overfitting.
+2. The train metric values are relatively stable, but the validation metric values are decreasing, suggesting that the model is not generalizing well to unseen data.
+3. The learning rate is 0.191, which is relatively high, indicating that the model is not learning at a sufficient rate to reduce overfitting.
+4. The architecture is the same for the entire experiment, which suggests that the model is not being overfitting due to differences in the training data or other factors.
+
+**Next experiment:**"
+synthetic_v2_healthy_000,healthy,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are decreasing over time, indicating a decrease in the model's error.
+2. The train metric values are increasing, indicating that the model is overfitting.
+3. The validation metric values are also increasing, but not as much as the train metric values.
+4. The learning rate is 0.00038, which is relatively low, indicating that the model is not overfitting due to a high learning rate.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Reduce the learning rate to 0.0005 or 0.0006 to see if it"
+synthetic_v2_overfitting_024,overfitting,overfitting,True,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in loss after the 3rd epoch, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is fitting the training data too closely.
+3. The validation metric values are also high, indicating that the model is not generalizing well to unseen data.
+4. The learning rate is low (0.000534), which is typically used for underfitting models.
+
+**Next experiment:**
+
+To further investigate the model's behavior, I would recommend the following next experiment:
+
+1. Reduce the learning rate to a moderate value (e.g"
+synthetic_v2_underfitting_009,underfitting,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The training loss and validation loss curves show a steady decrease in the early epochs, indicating that the model is overfitting.
+2. The train metric and validation metric curves show a high level of precision, indicating that the model is not overfitting to the training data.
+3. The learning rate is relatively low (0.002412), which suggests that the model is not overfitting due to a high learning rate.
+4. The number of epochs is also relatively small (1-11), which further supports the diagnosis of overfitting.
+
+**Next experiment:**
+
+To further diagnose overfitting, I would recommend the following next experiment:
+
+1"
+synthetic_v2_healthy_008,healthy,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are decreasing over time, indicating that the model is learning to fit the training data.
+2. The train metric values are increasing, indicating that the model is overfitting.
+3. The validation metric values are also increasing, but not as much as the train metric values.
+4. The learning rate is 0.001676, which is relatively low, indicating that the model is not overfitting due to a high learning rate.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Reduce the learning rate to 0.0008 or 0.0009 to"
+synthetic_v2_data_leakage_suspected_021,data_leakage_suspected,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in loss, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is overfitting to the training data.
+3. The validation metric values are lower, indicating that the model is not overfitting to the validation data.
+4. The learning rate is low (0.001), which is typically used for underfitting or early stopping.
+5. The presence of data leakage, where records from the same patients appear in both training and validation, is a strong indication of overfitting.
+
+**Next experiment:**
+
+To further diagnose overfitting"
+synthetic_v2_learning_rate_too_low_008,learning_rate_too_low,overfitting,False,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in loss over epochs, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is fitting the training data too closely, leading to overfitting.
+3. The validation metric values are lower than the train metric values, indicating that the model is not generalizing well to unseen data.
+
+**Next experiment:**
+
+To further investigate the overfitting issue, I would recommend the following next experiment:
+
+1. Reduce the learning rate to 1e-07 or 1e-08 to see if it improves the model's performance.
+2"
+synthetic_v2_learning_rate_too_low_027,learning_rate_too_low,overfitting,False,True,"Based on the provided training metrics and configuration, here's the diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train loss and validation loss are decreasing over time, indicating that the model is learning to fit the training data.
+2. The train metric is increasing, indicating that the model is overfitting.
+3. The validation metric is also increasing, indicating that the model is overfitting.
+4. The learning rate is 3e-06, which is a very small value, indicating that the model is not learning at all.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Reduce the number of epochs to 5-7.
+2. Increase the learning rate to 1e-05 or"
+synthetic_v2_data_leakage_suspected_000,data_leakage_suspected,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in the loss values, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is overfitting as well.
+3. The validation metric values are lower than the train metric values, indicating that the model is overfitting.
+4. The presence of identical samples in both the training and validation sets suggests that the model is overfitting, as it is fitting the same patterns in the training data.
+
+**Next experiment:**
+
+To further investigate the overfitting issue, I would recommend the following next experiment:
+
+1. Reduce the learning rate to"
+synthetic_v2_healthy_023,healthy,overfitting,False,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+* The train and validation loss curves show a steady decrease in the train loss and an increase in the validation loss over epochs 1-5, indicating that the model is overfitting.
+* The train metric values are relatively high, indicating that the model is fitting the training data too closely, which is a characteristic of overfitting.
+* The learning rate is relatively low (0.000935), which is also a characteristic of overfitting, as a low learning rate can lead to overfitting.
+
+**Next experiment:**
+
+To further investigate the overfitting issue, I would recommend the following next experiment:
+
+* Reduce the learning rate to"
+synthetic_v2_insufficient_evidence_016,insufficient_evidence,overfitting,False,True,"Based on the provided training metrics and configuration, here's a diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train loss values are increasing over time, indicating that the model is overfitting.
+2. The validation loss and validation metric are not recorded, which suggests that the model is not being evaluated on a test set.
+3. The train metric values are increasing over time, indicating that the model is not generalizing well to new, unseen data.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Evaluate the model on a test set using the validation loss and validation metric.
+2. Reduce the learning rate to 0.0005 or 0.0001 to see if it improves the model's"
+synthetic_v2_learning_rate_too_high_014,learning_rate_too_high,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are increasing over time, indicating a steady decrease in the model's performance.
+2. The train metric values are also increasing, which suggests that the model is overfitting.
+3. The validation metric values are not decreasing as quickly as the train metric values, which further supports the diagnosis of overfitting.
+4. The learning rate is 0.2251, which is relatively high. A high learning rate can lead to overfitting, as the model has more opportunities to fit the training data rather than learning from the test data.
+
+**Next experiment:**
+
+To further investigate the issue, I would recommend the following next"
+synthetic_v2_insufficient_evidence_017,insufficient_evidence,overfitting,False,False,"Based on the provided training metrics and configuration, here's the diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+* The train loss values are increasing over time, indicating a decrease in the model's performance.
+* The validation loss values are also increasing, but not as sharply as the train loss values.
+* The train metric is empty, which suggests that the model is not learning any new features or patterns.
+* The validation metric is also empty, which suggests that the model is not generalizing well to unseen data.
+* The learning rate is 0.001, which is relatively low, indicating that the model is not learning quickly.
+* The number of epochs is 2, which is a relatively small number, indicating that the model may not be able to generalize well.
+
+**"
+synthetic_v2_data_leakage_suspected_023,data_leakage_suspected,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in loss, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is overfitting as well.
+3. The validation metric values are lower than the train metric values, indicating that the model is overfitting.
+4. The performance dropped to 0.66 when split by document, which suggests that the model is overfitting to the source documents.
+
+**Next experiment:**
+
+To further investigate the overfitting issue, I would recommend the following next experiment:
+
+1. Reduce the number of epochs: Try reducing the number of epochs to see"
+synthetic_v2_learning_rate_too_low_017,learning_rate_too_low,overfitting,False,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over time, indicating that the model is learning to fit the training data.
+* The train metric and validation metric are increasing over time, indicating that the model is learning to fit the validation data.
+* The learning rate is 4.4e-06, which is a very small value, indicating that the model is not learning at all.
+* The number of epochs is 13, which is a relatively large number, indicating that the model is overfitting.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+* Reduce the learning rate to 1e"
+synthetic_v2_underfitting_019,underfitting,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in loss, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is fitting the training data too closely.
+3. The validation metric values are lower than the train metric values, indicating that the model is not generalizing well to unseen data.
+4. The learning rate is low (0.00213), which is typically used for underfitting models.
+
+**Next experiment:**
+
+To further investigate the issue, I would recommend the following next experiment:
+
+1. Reduce the learning rate to a higher value (e.g., 0.005) to"
+synthetic_v2_insufficient_evidence_024,insufficient_evidence,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are decreasing over time, indicating that the model is learning to fit the training data more closely.
+2. The train metric values are increasing, indicating that the model is overfitting.
+3. The validation metric is missing, which is unusual for a binary classification problem.
+4. The learning rate is 0.001, which is relatively low and suggests that the model is not overfitting due to a high learning rate.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Increase the number of epochs to 7 or 8 to see if the model starts to over"
+synthetic_v2_learning_rate_too_high_017,learning_rate_too_high,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are increasing over time, indicating a trend towards overfitting.
+2. The train metric values are also increasing, which suggests that the model is fitting the training data too closely to the optimal solution.
+3. The validation metric values are not decreasing, which is a sign of overfitting.
+4. The learning rate is 0.0725, which is relatively high. A high learning rate can lead to overfitting, especially if the model is not properly regularized.
+
+**Next experiment:**
+
+To further investigate the issue, I would recommend the following next experiment:
+
+1. Reduce the learning rate to a lower value"
+synthetic_v2_overfitting_018,overfitting,overfitting,True,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train loss values are decreasing over time, indicating a decrease in the model's error.
+2. The validation loss values are also decreasing, but not as much as the train loss values.
+3. The train metric values are increasing, indicating that the model is overfitting.
+4. The validation metric values are not decreasing, which is a sign of overfitting.
+
+**Next experiment:**
+
+To further investigate the issue, I would recommend the following next experiment:
+
+1. Reduce the learning rate to 0.00096.
+2. Increase the number of epochs to 10 or more.
+3. Use a different optimizer, such as Adam or RMS"
+synthetic_v2_insufficient_evidence_005,insufficient_evidence,overfitting,False,True,"Based on the provided training metrics and configuration, here's the analysis:
+
+**Diagnosis:** Overfitting
+The diagnosis is overfitting because the training loss is increasing, but the validation loss is not decreasing. This is a common issue in machine learning, where the model is too complex and starts to fit the noise in the training data, rather than the underlying pattern.
+
+**Evidence:** 
+The evidence is that the model is not generalizing well to the test data. The train metric is 0.536, which indicates that the model is not performing well on the training data. The validation metric is 0.549, which is slightly higher than the train metric, indicating that the model is not overfitting on the validation data either.
+
+**Next experiment:** 
+To further investigate the"
+synthetic_v2_healthy_020,healthy,overfitting,False,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+* The model's performance on both the training and validation sets is decreasing over time, indicating a decrease in accuracy.
+* The validation loss is increasing, which is a sign of overfitting.
+* The training metric is also decreasing, which further supports the diagnosis of overfitting.
+* The learning rate is 0.0016, which is relatively low, but not extremely low. A low learning rate can contribute to overfitting.
+
+**Next experiment:**
+
+To further investigate the issue, I would recommend the following next experiment:
+
+* Reduce the number of epochs to 5-7. This will help the model to learn more general concepts and"
+synthetic_v2_learning_rate_too_high_007,learning_rate_too_high,overfitting,False,False,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The high train loss values (0.857, 3.039, 0.803, 3.327, 1.19, 2.596, 1.145, 2.769, 1.227, 3.223, 1.2, 3.38) indicate that the model is overfitting, as it is fitting the training data too closely to the underlying pattern.
+2. The high validation loss values (0.976, 3.236, 0.921, 3.46, 1.326, 2.752, 1.321"
+synthetic_v2_learning_rate_too_low_023,learning_rate_too_low,overfitting,False,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+* The train and validation loss curves show a rapid decrease in loss after the 5th epoch, indicating that the model is overfitting.
+* The train metric values are high, indicating that the model is fitting the training data too closely.
+* The validation metric values are also high, indicating that the model is not generalizing well to unseen data.
+
+**Next experiment:**
+
+To further investigate the model's behavior, I would recommend the following next experiment:
+
+* Reduce the learning rate to 1.2e-06 to see if it improves the model's performance.
+* Increase the number of epochs to 20-25 to see if it improves"
+synthetic_v2_healthy_003,healthy,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss values are decreasing over time, indicating a decrease in the model's error.
+2. The train metric values are increasing, indicating that the model is overfitting.
+3. The validation metric values are also increasing, but not as much as the train metric values.
+4. The learning rate is 0.001859, which is relatively low. A low learning rate can contribute to overfitting.
+5. The architecture is the same for the entire experiment, which suggests that the model is not being overfitting due to differences in the training data or hyperparameters.
+
+**Next experiment:**
+
+To further investigate the issue, I"
+synthetic_v2_data_leakage_suspected_027,data_leakage_suspected,overfitting,False,True,"Based on the provided training metrics and configuration, here's my diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in loss, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is overfitting to the training data.
+3. The validation metric values are high, indicating that the model is overfitting to the validation data.
+4. The learning rate is low (0.001), which is typically used for underfitting or early stopping.
+5. The additional information mentions a group audit finding that records from the same patients appeared in both training and validation, which suggests that the model is overfitting to the same data.
+
+**Next experiment:**"
+synthetic_v2_overfitting_025,overfitting,overfitting,True,False,"Based on the provided training metrics and configuration, here's a diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The training loss values are decreasing over time, indicating a decrease in the model's error.
+2. The validation loss values are also decreasing over time, indicating a decrease in the model's error.
+3. The train metric values are increasing over time, indicating an increase in the model's error.
+4. The validation metric values are decreasing over time, indicating a decrease in the model's error.
+5. The learning rate is 0.001055, which is relatively high. A high learning rate can lead to overfitting.
+6. The number of epochs is 11, which is a relatively large number. A large number of epochs can lead to"
+synthetic_v2_learning_rate_too_high_005,learning_rate_too_high,overfitting,False,True,"Based on the provided training metrics and configuration, here's a diagnosis and suggested next experiment:
+
+**Diagnosis:**
+The training loss values indicate a gradual decrease in the loss function, suggesting that the model is learning. However, the validation loss values show a significant increase in the loss function, indicating overfitting.
+
+**Evidence:**
+
+* The train metric values show a steady decrease in the loss function, indicating that the model is learning.
+* The validation metric values show a significant increase in the loss function, indicating overfitting.
+* The learning rate is 0.08, which is relatively low, suggesting that the model is not overfitting due to high learning rates.
+* The number of epochs is 9, which is a moderate number, suggesting that the model is not overfit"
+synthetic_v2_overfitting_008,overfitting,overfitting,True,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The model's train and validation loss values are decreasing over time, indicating that the model is learning to fit the training data.
+2. The train metric values are increasing, indicating that the model is overfitting.
+3. The validation metric values are also increasing, indicating that the model is overfitting.
+4. The learning rate is 0.000867, which is relatively low, indicating that the model is not overfitting due to a high learning rate.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following next experiment:
+
+1. Reduce the learning rate to 0.0008 or 0"
+synthetic_v2_overfitting_000,overfitting,overfitting,True,True,"Based on the provided training metrics and configuration, here's the diagnosis:
+
+**Diagnosis:** Overfitting
+
+**Evidence:**
+
+1. The train and validation loss curves show a steady decrease in the train loss and an increase in the validation loss, indicating that the model is overfitting.
+2. The train metric values are high, indicating that the model is overfitting as well.
+3. The learning rate is low (0.00146), which is a characteristic of overfitting models, as they tend to converge quickly.
+4. The number of epochs is also high (11), which is another indication of overfitting, as models with many epochs tend to fit the training data too closely.
+
+**Next experiment:**
+
+To further diagnose the model, I would recommend the following"

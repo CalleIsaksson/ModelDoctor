@@ -1,0 +1,19 @@
+{
+    "dataset": "manual_challenge_v1",
+    "examples": 21,
+    "diagnosis_accuracy": 0.8571,
+    "parsed_rate": 1.0,
+    "format_rate": 1.0,
+    "evidence_with_numbers_rate": 0.8095,
+    "evidence_numeric_grounding_rate": 0.8824,
+    "per_label_accuracy": {
+        "data_leakage_suspected": 0.6667,
+        "healthy": 1.0,
+        "insufficient_evidence": 1.0,
+        "learning_rate_too_high": 1.0,
+        "learning_rate_too_low": 0.6667,
+        "overfitting": 0.6667,
+        "underfitting": 1.0
+    },
+    "note": "This is a small manually designed challenge set, not a real-world benchmark."
+}

@@ -1,0 +1,10 @@
+{
+    "dataset": "untouched_final_v1",
+    "examples": 35,
+    "examples_per_diagnosis": 5,
+    "exact_overlap_with_previous_data": 0,
+    "sha256": "81da07f2626af3f422764f0881f8607b1778882cba0375bd7c66fb76ac7454aa",
+    "status": "evaluated_once_and_frozen",
+    "first_evaluation_diagnosis_accuracy": 0.8,
+    "first_evaluation_file": "results/v3/final_metrics.json"
+}

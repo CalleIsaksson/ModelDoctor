@@ -1,0 +1,23 @@
+{
+    "original_complete_cases": {
+        "accuracy": 0.1333,
+        "insufficient_predictions": 9,
+        "examples": 15
+    },
+    "known_model_and_task": {
+        "accuracy": 0.1333,
+        "insufficient_predictions": 8,
+        "examples": 15
+    },
+    "neutral_additional_information": {
+        "accuracy": 0.4667,
+        "insufficient_predictions": 0,
+        "examples": 15
+    },
+    "known_metadata_and_neutral_text": {
+        "accuracy": 0.4,
+        "insufficient_predictions": 0,
+        "examples": 15
+    },
+    "conclusion": "Additional information is the main trigger for excessive insufficient_evidence predictions; model name and task have little effect."
+}

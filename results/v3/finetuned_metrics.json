@@ -1,0 +1,18 @@
+{
+    "examples": 49,
+    "diagnosis_accuracy": 0.9796,
+    "parsed_rate": 1.0,
+    "format_rate": 1.0,
+    "evidence_with_numbers_rate": 0.7959,
+    "evidence_numeric_grounding_rate": 0.8974,
+    "per_label_accuracy": {
+        "data_leakage_suspected": 1.0,
+        "healthy": 1.0,
+        "insufficient_evidence": 1.0,
+        "learning_rate_too_high": 1.0,
+        "learning_rate_too_low": 1.0,
+        "overfitting": 0.8571,
+        "underfitting": 1.0
+    },
+    "validation_loss": 0.0435
+}

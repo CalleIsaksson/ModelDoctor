@@ -1,0 +1,19 @@
+{
+    "dataset": "untouched_final_v1",
+    "examples": 35,
+    "diagnosis_accuracy": 0.8,
+    "parsed_rate": 0.9714,
+    "format_rate": 1.0,
+    "evidence_with_numbers_rate": 0.8571,
+    "evidence_numeric_grounding_rate": 0.7667,
+    "per_label_accuracy": {
+        "data_leakage_suspected": 0.2,
+        "healthy": 1.0,
+        "insufficient_evidence": 1.0,
+        "learning_rate_too_high": 1.0,
+        "learning_rate_too_low": 1.0,
+        "overfitting": 0.6,
+        "underfitting": 0.8
+    },
+    "note": "This is a controlled evaluation set, not a real-world benchmark."
+}

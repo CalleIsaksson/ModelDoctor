@@ -1,0 +1,677 @@
+example_id,expected_diagnosis,predicted_diagnosis,correct,format_ok,answer,evidence_has_numbers,evidence_numbers_supported,evidence_numbers,unsupported_evidence_numbers
+synthetic_v3_data_leakage_suspected_021,data_leakage_suspected,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in the training loss and an increase in the validation loss over epochs. This indicates that the model is overfitting.
+* The train metric and validation metric curves show a similar improvement in both the training and validation metrics. This suggests that the model is not underfitting.
+* The learning rate is 0.001, which is relatively low. This suggests that the model is not overfitting due to a high learning rate.
+* The additional information about the audit suggests that the issue is related to data leakage, where records from the same patients appear in both training and validation.
+
+**Next experiment:**",True,True,[0.001],[]
+synthetic_v3_learning_rate_too_high_016,learning_rate_too_high,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are increasing over epochs, indicating that the model is improving.
+* The train metric and validation metric are also increasing over epochs, indicating that the model is improving.
+* The learning rate is 0.0989, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 8, which is a reasonable number for a text classification task.
+
+**Next experiment:** None
+
+The model is performing well, with increasing train and validation metrics, and a relatively low learning rate. There is no indication of overfitting, underfitting, or data leakage. The model is also not improving",True,True,"[0.0989, 8.0]",[]
+synthetic_v3_learning_rate_too_low_014,learning_rate_too_low,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is not overfitting or underfitting.
+* The train metric and validation metric curves show a similar trend, indicating that the model is not learning too quickly or too slowly.
+* The learning rate is 6.7e-06, which is a relatively small value, indicating that the model is not learning too quickly.
+* The number of epochs is 13, which is a moderate number, indicating that the model is not overfitting or underfitting.
+
+**Next experiment:** 
+
+Since the model is healthy, there is no need for a next experiment",True,True,"[6.7e-06, 13.0]",[]
+synthetic_v3_underfitting_049,underfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is learning to classify the data correctly.
+* The train metric and validation metric curves show a similar trend, with the train metric increasing and the validation metric decreasing over time.
+* The learning rate is 0.001404, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 10, which is a reasonable number for a multiclass classification problem.
+
+**Next experiment:** Increase the number of epochs to 20 or more to see if the model can generalize better.
+
+The analysis suggests that the model is learning to classify",True,True,"[0.001404, 10.0]",[]
+synthetic_v3_underfitting_013,underfitting,healthy,False,True,"Based on the provided training metrics and configuration, I would diagnose the model as follows:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The model's performance on both the training and validation sets is relatively stable, with a small gap between the two.
+* The training loss and validation loss curves are relatively flat, indicating that the model is not overfitting or underfitting.
+* The learning rate is 0.00165, which is relatively low, indicating that the model is not learning too quickly or too slowly.
+* The model still performed poorly on its own training examples, which suggests that the model is not overfitting to the training data.
+
+**Next experiment:** None
+
+The model appears to be performing well on its own training examples, and there is no indication of overfit",True,True,[0.00165],[]
+synthetic_v3_overfitting_035,overfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The train-validation gap became larger near the end of the run, indicating that the model is not overfitting.
+* The high validation performance alone is not leakage, as there is no direct evidence of data leakage such as split overlap, preprocessing before the split, or a large drop on a clean holdout.
+* The model's performance on both the training and validation sets is similar, indicating that the model is not underfitting.
+* The learning rate is 0.002152, which is relatively low, indicating that the model is not overfitting due to a high learning rate.
+
+**Next experiment:** None
+
+The model appears to be performing well,",True,True,[0.002152],[]
+synthetic_v3_healthy_017,healthy,healthy,True,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The final checkpoint kept strong results on both training and validation.
+* The training and validation metrics show a similar improvement over epochs, indicating that the model is not overfitting.
+* The learning rate is 0.000562, which is relatively low, indicating that the model is not learning rate too high.
+* The number of epochs is 11, which is a reasonable number for a sequence classification model.
+
+**Next experiment:** None specified.",True,True,"[0.000562, 11.0]",[]
+synthetic_v3_insufficient_evidence_049,insufficient_evidence,underfitting,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Underfitting
+
+**Evidence:**
+
+1. The training loss and validation loss curves show a steady decrease in the training loss, but the validation loss remains relatively stable and doesn't decrease as much as the training loss.
+2. The train metric values are increasing, but not as steeply as the validation metric. This suggests that the model is not overfitting, as the train metric is not as sensitive to changes in the model.
+3. The learning rate is 0.001, which is relatively low. This suggests that the model is not overfitting, as the learning rate is not too high.
+
+**Next experiment:**
+
+Given the diagnosis of underfitting, the",True,True,"[1.0, 2.0, 3.0, 0.001]",[]
+synthetic_v3_learning_rate_too_low_004,learning_rate_too_low,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over time, indicating that the model is improving.
+* The train metric and validation metric are increasing over time, indicating that the model is improving.
+* The learning rate is 1.4e-06, which is a very small value, indicating that the model is not overfitting.
+* The number of epochs is 13, which is a reasonable number for a text classification model.
+
+**Next experiment:** None
+
+The model is performing well, with decreasing training and validation losses, and increasing train and validation metrics. The learning rate is not too high or too low, and the number of epochs is reasonable. There",True,True,"[1.4e-06, 13.0]",[]
+synthetic_v3_overfitting_024,overfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over time, indicating that the model is improving.
+* The train metric and validation metric are increasing over time, indicating that the model is improving.
+* The learning rate is 0.002547, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 12, which is a reasonable number for a binary classification model.
+
+**Next experiment:** None
+
+The model is currently in a healthy state, with decreasing training and validation losses, increasing train and validation metrics, and a relatively low learning rate. There is no indication of overfitting, underfitting, or data",True,True,"[0.002547, 12.0]",[]
+synthetic_v3_overfitting_040,overfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is improving over time.
+* The train metric and validation metric curves show a similar improvement in both metrics, indicating that the model is not overfitting.
+* The learning rate is 0.002847, which is relatively low, indicating that the model is not learning rate too high.
+* The number of epochs is 8, which is a reasonable number for a text classification task.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a steady decrease in both train and validation loss curves. The train metric and validation metric curves show a similar",True,True,"[0.002847, 8.0]",[]
+synthetic_v3_healthy_015,healthy,healthy,True,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a general improvement trend, with the validation loss curve returning to its improving trend after the 7th epoch.
+* The train metric and validation metric curves show a similar improvement trend, with the train metric curve reaching a plateau around epoch 6 and the validation metric curve also showing a similar trend.
+* The learning rate is 0.000357, which is relatively low and indicates that the model is not overfitting.
+* There is no indication of data leakage, insufficient evidence, or other issues.
+
+**Next experiment:** Continue training the model with the same configuration and learning rate, and monitor the performance on the test set",True,True,"[7.0, 6.0, 0.000357]",[]
+synthetic_v3_healthy_040,healthy,healthy,True,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar trend, indicating that the model is not underfitting.
+* The learning rate is 0.000877, which is a relatively low value, indicating that the model is not learning rate too high.
+* The number of epochs is 11, which is a reasonable number for a text classification task.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a steady decrease in both training and validation loss curves. The train metric and validation metric curves show a similar",True,True,"[0.000877, 11.0]",[]
+synthetic_v3_learning_rate_too_high_000,learning_rate_too_high,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a general trend of improvement, with the validation loss curve showing a slight decrease after the 7th epoch.
+* The train metric and validation metric curves show a similar trend, with the train metric curve showing a slight increase after the 6th epoch.
+* The learning rate is 0.1365, which is relatively low and suggests that the model is not overfitting.
+* The number of epochs is 9, which is a reasonable number for a binary classification model.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a slight improvement in the validation loss curve after the",True,True,"[7.0, 6.0, 0.1365, 9.0]",[]
+synthetic_v3_insufficient_evidence_030,insufficient_evidence,healthy,False,False,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss is [1.537], which is relatively high.
+* The validation loss is [1.565], which is also relatively high.
+* The train metric is [0.514], which is slightly above 0.5, indicating a slight improvement in the model's performance.
+* The validation metric is [0.49], which is slightly below 0.5, indicating a slight decline in the model's performance.
+* The learning rate is 0.001, which is relatively low.
+* The number of epochs is [1], which is a small number, indicating that the model may not have had enough time to converge.",True,False,"[1.537, 1.565, 0.514, 0.5, 0.49, 0.5, 0.001, 1.0]","[0.5, 0.5]"
+synthetic_v3_underfitting_045,underfitting,healthy,False,True,"Based on the provided training metrics and configuration, here's my analysis:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar trend, indicating that the model is not underfitting.
+* The learning rate is 0.001918, which is relatively low, indicating that the model is not learning rate too high.
+* The number of epochs is 8, which is a reasonable number for a binary classification problem.
+
+**Next experiment:** None
+
+The model is performing well, with a steady decrease in both training and validation loss, and a similar trend in the train and validation metrics. The learning rate is also relatively",True,True,"[0.001918, 8.0]",[]
+synthetic_v3_data_leakage_suspected_015,data_leakage_suspected,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in the training loss and an increase in the validation loss over epochs. This indicates that the model is overfitting.
+* The train metric and validation metric curves show a similar improvement in both the training and validation metrics. This suggests that the model is not underfitting.
+* The learning rate is 0.001, which is relatively low. This suggests that the model is not overfitting due to a high learning rate.
+* The additional information about the audit suggests that the issue is related to data leakage, where records from the same patients appear in both training and validation.
+
+**Next experiment:**",True,True,[0.001],[]
+synthetic_v3_learning_rate_too_high_010,learning_rate_too_high,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are increasing over epochs, indicating that the model is improving.
+* The train metric and validation metric are also increasing over epochs, indicating that the model is improving.
+* The learning rate is 0.2791, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 8, which is a reasonable number for a text classification task.
+
+**Next experiment:** None
+
+The model appears to be converging, and the performance metrics are improving over epochs. The low learning rate suggests that the model is not overfitting. The number of epochs is reasonable for a text classification",True,True,"[0.2791, 8.0]",[]
+synthetic_v3_underfitting_020,underfitting,healthy,False,False,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar trend, indicating that the model is not underfitting.
+* The learning rate is 0.002115, which is a relatively low learning rate, indicating that the model is not overfitting.
+* The number of epochs is 10, which is a moderate number, indicating that the model is not overfitting.
+* The model has not shown any signs of data leakage, such as split overlap, preprocessing before the split, or a large drop on a clean holdout",True,True,"[0.002115, 10.0]",[]
+synthetic_v3_healthy_001,healthy,healthy,True,False,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The gap between the two splits stayed small throughout the run, indicating that the model is not overfitting.
+* The training and validation loss curves show a general trend of improvement, with a small decrease in the gap between the two splits after the 7th epoch.
+* The training metric and validation metric curves show a general trend of improvement, with a small increase in the gap between the two splits after the 8th epoch.
+* The learning rate is 0.002647, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 9, which is a reasonable number for a multiclass classification problem",True,True,"[7.0, 8.0, 0.002647, 9.0]",[]
+synthetic_v3_learning_rate_too_low_049,learning_rate_too_low,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over time, indicating that the model is not overfitting.
+* The training metric and validation metric are increasing over time, indicating that the model is not underfitting.
+* The learning rate is 8.4e-06, which is a relatively small value, indicating that the model is not learning rate too high.
+* The number of epochs is 15, which is a moderate number, indicating that the model is not learning rate too low.
+
+**Next experiment:**
+
+Given the healthy diagnosis, the next experiment would be to:
+
+* Increase the number of epochs to 20 or more to see if the model",True,True,"[8.4e-06, 15.0]",[]
+synthetic_v3_healthy_007,healthy,healthy,True,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The final checkpoint kept strong results on both training and validation.
+* The training and validation metrics show a similar improvement over epochs, indicating that the model is not overfitting.
+* The validation loss is relatively stable, with a small gap between the validation and training losses, suggesting that the model is not underfitting.
+* The learning rate is 0.000686, which is relatively low, indicating that the model is not learning rate too high.
+* There is no evidence of data leakage, as the model is not using any target-revealing features or large drop on a clean holdout.
+
+**Next experiment:** None
+
+The model appears to be performing",True,True,[0.000686],[]
+synthetic_v3_data_leakage_suspected_034,data_leakage_suspected,healthy,False,True,"Based on the provided training metrics and configuration, here's my analysis:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over epochs, indicating that the model is improving.
+* The train metric and validation metric are increasing over epochs, indicating that the model is also improving.
+* The learning rate is 0.001, which is relatively low, indicating that the model is not overfitting.
+* There is no indication of data leakage, insufficient evidence, or overfitting.
+
+**Next experiment:** None
+
+The model is performing well, with decreasing training and validation losses, and increasing train and validation metrics. The low learning rate suggests that the model is not overfitting. There is no indication of data leakage or insufficient evidence, and the model is",True,True,[0.001],[]
+synthetic_v3_insufficient_evidence_032,insufficient_evidence,healthy,False,False,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss is decreasing over epochs, indicating that the model is improving.
+* The validation loss is also decreasing over epochs, further supporting the healthy diagnosis.
+* The model is using a CNN (Convolutional Neural Network) architecture, which is a common and effective architecture for image classification tasks.
+* The training metric is empty, which suggests that the model is not overfitting or underfitting.
+* The validation metric is also empty, indicating that the model is not overfitting or underfitting.
+* The learning rate is 0.001, which is a relatively low learning rate. This suggests that the model is not overfitting",True,True,[0.001],[]
+synthetic_v3_learning_rate_too_high_011,learning_rate_too_high,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady improvement over epochs, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar improvement over epochs, indicating that the model is not underfitting.
+* The learning rate is 0.2404, which is a reasonable value for a neural network model.
+* The gradient norms do not spike after optimizer updates, indicating that the model is not experiencing overfitting or underfitting.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a steady improvement in both the training and validation loss curves. The learning rate is reasonable, and the gradient",True,True,[0.2404],[]
+synthetic_v3_overfitting_005,overfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The train-validation gap has been increasing over time, indicating that the model is not improving in terms of validation metrics.
+* The validation loss has been decreasing over time, indicating that the model is improving in terms of validation metrics.
+* The train metric has been increasing over time, indicating that the model is improving in terms of training metrics.
+* The learning rate has been decreasing over time, indicating that the model is improving in terms of training metrics.
+
+**Next experiment:** Increase the number of epochs to 20 or more to see if the gap decreases.
+
+The diagnosis is healthy, indicating that the model is improving in terms of both training and validation metrics. However, the",False,False,[],[]
+synthetic_v3_overfitting_007,overfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in the training loss and an increase in the validation loss over epochs.
+* The training metric and validation metric curves show a similar trend, with the training metric decreasing and the validation metric increasing.
+* The learning rate is 0.000534, which is relatively low.
+* There is no early stopping used after the validation score peaked, which suggests that the model is not overfitting.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a steady decrease in the training loss and an increase in the validation loss. The low learning rate and lack of early stopping suggest that the model is",True,True,[0.000534],[]
+synthetic_v3_data_leakage_suspected_006,data_leakage_suspected,healthy,False,True,"Based on the provided training metrics and configuration, here's my analysis:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady improvement over epochs, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar improvement over epochs, indicating that the model is not underfitting.
+* The learning rate is 0.001, which is a relatively low learning rate, indicating that the model is not overfitting.
+* There are no indications of data leakage, insufficient evidence, or learning rate too high or too low.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a steady improvement in both train and validation metrics. The low learning rate and similar train and validation metrics curves suggest",True,True,[0.001],[]
+synthetic_v3_underfitting_041,underfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* Both splits reached a similarly weak plateau near the end, indicating that the model is not overfitting.
+* The training and validation loss curves show a general trend of improvement, but with some fluctuations.
+* The training metric and validation metric curves show a similar trend, indicating that the model is not underfitting.
+* The learning rate is 0.00223, which is relatively low, indicating that the model is not overfitting due to a high learning rate.
+* The number of epochs is 10, which is a reasonable number for a sequence classification model.
+
+**Next experiment:** None
+
+The model appears to be performing well, with both splits reaching",True,True,"[0.00223, 10.0]",[]
+synthetic_v3_insufficient_evidence_047,insufficient_evidence,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss is decreasing over time, indicating that the model is improving.
+* The validation loss is also decreasing over time, further indicating that the model is improving.
+* The model has been trained for only two epochs, which is a relatively short amount of time for a sequence classification task.
+* There are no accuracy metrics recorded, which suggests that the model is not performing well on the task.
+
+**Next experiment:**
+
+Given the healthy diagnosis, the next experiment would be to:
+
+1. Increase the number of epochs to see if the model can continue to improve.
+2. Increase the learning rate to see if it can lead to better convergence.
+3.",False,False,[],[]
+synthetic_v3_overfitting_018,overfitting,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a general downward trend, indicating that the model is improving over time.
+* The train metric and validation metric curves show a similar trend, indicating that the model is converging.
+* The learning rate is 0.002189, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 9, which is a reasonable number for a binary classification model.
+
+**Next experiment:** None
+
+The model appears to be converging, and the performance metrics suggest that the model is improving over time. The low learning rate and a reasonable number of epochs suggest that the model is",True,True,"[0.002189, 9.0]",[]
+synthetic_v3_learning_rate_too_low_033,learning_rate_too_low,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is not overfitting or underfitting.
+* The train metric and validation metric curves show a similar trend, indicating that the model is not learning too quickly or too slowly.
+* The learning rate is 6.2e-06, which is a relatively low learning rate, indicating that the model is not overfitting.
+* The number of epochs is 12, which is a moderate number, indicating that the model is not overfitting or underfitting.
+
+**Next experiment:**
+
+Given the healthy diagnosis, the next experiment would be to",True,True,"[6.2e-06, 12.0]",[]
+synthetic_v3_learning_rate_too_low_007,learning_rate_too_low,healthy,False,False,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The available epoch budget ended before the model reached a useful result. This suggests that the model was not able to converge or improve significantly during the training process.
+* The high validation loss values (1.705, 1.698, 1.691, 1.684, 1.677, 1.67, 1.663, 1.656, 1.649, 1.642, 1.635, 1.628, 1.621, 1.614) indicate that the model was not able to improve on the validation set.
+* The high train loss values (1.645,",True,True,"[1.705, 1.698, 1.691, 1.684, 1.677, 1.67, 1.663, 1.656, 1.649, 1.642, 1.635, 1.628, 1.621, 1.614, 1.645]",[]
+synthetic_v3_underfitting_031,underfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* Both splits reached a similarly weak plateau near the end, indicating that the model is not overfitting.
+* The training and validation loss curves show a general trend of improvement, but with some fluctuations.
+* The training metric values are relatively stable, indicating that the model is not underfitting.
+* The validation metric values are also relatively stable, indicating that the model is not overfitting.
+
+**Next experiment:** None
+
+The model appears to be performing well, with both splits reaching a weak plateau near the end. There is no indication of overfitting, underfitting, or other issues. The model is also not experiencing high learning rates or poor validation",False,False,[],[]
+synthetic_v3_learning_rate_too_low_028,learning_rate_too_low,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over time, indicating that the model is improving.
+* The train metric and validation metric are increasing over time, indicating that the model is improving.
+* The learning rate is 6.5e-06, which is a relatively small value, indicating that the model is not overfitting.
+* There is no evidence of data leakage, as the model is not using any target-revealing features or large drop on a clean holdout.
+
+**Next experiment:** Continue training the model with the same configuration and learning rate, and monitor its performance on the test set.
+
+The model appears to be performing well, with decreasing training",True,True,[6.5e-06],[]
+synthetic_v3_insufficient_evidence_020,insufficient_evidence,healthy,False,False,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss is 1.348, which is relatively high.
+* The validation loss is 1.303, which is also relatively high.
+* The train metric is 0.519, which is slightly above 0.5, indicating some improvement in the model's performance.
+* The validation metric is 0.545, which is slightly above 0.5, indicating some improvement in the model's performance.
+* The learning rate is 0.001, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 1, which is a relatively small number, indicating that the model",True,False,"[1.348, 1.303, 0.519, 0.5, 0.545, 0.5, 0.001, 1.0]","[0.5, 0.5]"
+synthetic_v3_data_leakage_suspected_046,data_leakage_suspected,healthy,False,True,"Based on the provided training metrics and configuration, here's my analysis:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over epochs, indicating that the model is improving.
+* The train metric and validation metric are increasing over epochs, indicating that the model is also improving.
+* The learning rate is 0.001, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 6, which is a reasonable number for a text classification task.
+
+**Next experiment:** None
+
+The provided training metrics suggest that the model is improving over epochs, which is consistent with a healthy model. There is no indication of overfitting, underfitting, or data leakage. The low learning rate and sufficient number of",True,True,"[0.001, 6.0]",[]
+synthetic_v3_underfitting_036,underfitting,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar trend, with a small stable gap between them, indicating that the model is not underfitting.
+* The learning rate is 0.002971, which is a relatively low value, indicating that the model is not overfitting due to a high learning rate.
+* The number of epochs is 10, which is a reasonable number for a binary classification problem.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a small stable gap between the train metric",True,True,"[0.002971, 10.0]",[]
+synthetic_v3_learning_rate_too_high_032,learning_rate_too_high,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over time, indicating that the model is improving.
+* The train metric and validation metric are increasing over time, indicating that the model is also improving.
+* The learning rate is 0.2926, which is a relatively moderate value.
+* The number of epochs is 12, which is a moderate to large number.
+* The gradient clipping is enabled with the same limit in every epoch, which suggests that the model is not overfitting.
+
+**Next experiment:** Increase the number of epochs to 20 or more to further test the model's ability to generalize.
+
+The diagnosis is healthy, indicating that the model is performing",True,True,"[0.2926, 12.0]",[]
+synthetic_v3_healthy_008,healthy,healthy,True,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss is decreasing over time, indicating that the model is improving.
+* The validation loss is also decreasing over time, further indicating that the model is improving.
+* The train metric and validation metric are all above 0.5, indicating that the model is performing well.
+* There are no significant increases in the train or validation loss, which suggests that the model is not overfitting.
+* The learning rate is 0.001676, which is relatively low, indicating that the model is not learning too quickly.
+
+**Next experiment:**
+
+Given the healthy diagnosis, the next experiment would be to:
+
+* Increase the number of epochs to see",True,False,"[0.5, 0.001676]",[0.5]
+synthetic_v3_learning_rate_too_low_015,learning_rate_too_low,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves are moving in the correct direction, indicating that the model is improving over time.
+* The training metric and validation metric curves are showing a similar improvement, indicating that the model is not overfitting or underfitting.
+* The learning rate is 9.8e-06, which is a relatively small value, indicating that the model is not learning too quickly or too slowly.
+* The number of epochs is 13, which is a moderate number, indicating that the model is not overfitting or underfitting.
+
+**Next experiment:** None
+
+The model appears to be performing well, with the training loss and validation",True,True,"[9.8e-06, 13.0]",[]
+synthetic_v3_insufficient_evidence_003,insufficient_evidence,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over time, indicating that the model is improving.
+* The train metric and validation metric are increasing over time, indicating that the model is improving.
+* The learning rate is 0.001, which is relatively low, indicating that the model is not overfitting.
+* The accuracy is not improving, which suggests that the model is not overfitting.
+
+**Next experiment:**
+
+Given the healthy diagnosis, the next experiment would be to:
+
+* Increase the number of epochs to see if the model can continue to improve.
+* Increase the learning rate to see if the model can improve further.
+* Use a different",True,True,[0.001],[]
+synthetic_v3_data_leakage_suspected_045,data_leakage_suspected,healthy,False,False,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady improvement in the early epochs (1-2) and a gradual decrease in the later epochs (5-6). This suggests that the model is not overfitting or underfitting.
+* The train metric and validation metric curves show a similar improvement in the early epochs (1-2) and a gradual improvement in the later epochs (5-6). This suggests that the model is not overfitting or underfitting.
+* The learning rate is 0.001, which is a relatively low learning rate. This suggests that the model is not learning rate too high.
+* The additional information about a",True,False,"[1.0, -2.0, 5.0, -6.0, 1.0, -2.0, 5.0, -6.0, 0.001]","[-2.0, -6.0, -2.0, -6.0]"
+synthetic_v3_healthy_014,healthy,healthy,True,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are decreasing over epochs, indicating that the model is improving.
+* The train metric and validation metric are increasing over epochs, indicating that the model is also improving.
+* The learning rate is 0.001756, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 12, which is a reasonable number for a CNN model.
+
+**Next experiment:** None specified. However, based on the healthy diagnosis, the next experiment could be:
+
+* Increasing the number of epochs to 15 or 20 to see if the model continues to improve.
+* Increasing the learning rate to",True,True,"[0.001756, 12.0]",[]
+synthetic_v3_insufficient_evidence_037,insufficient_evidence,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss is decreasing over time, indicating that the model is improving.
+* The validation loss is also decreasing over time, further indicating that the model is improving.
+* The model has been trained for only two epochs, which is a relatively short amount of time for a multiclass classification model.
+* There is no accuracy metric recorded, which suggests that the model is not performing well on the task.
+
+**Next experiment:**
+
+Given the healthy diagnosis, the next experiment would be to:
+
+1. Increase the number of epochs to see if the model continues to improve.
+2. Increase the learning rate to see if it improves the model's performance.
+3.",False,False,[],[]
+synthetic_v3_data_leakage_suspected_012,data_leakage_suspected,healthy,False,False,"Based on the provided training metrics and configuration, here's my analysis:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady improvement over epochs, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar improvement over epochs, indicating that the model is not underfitting.
+* The learning rate is 0.001, which is a relatively low learning rate, indicating that the model is not overfitting.
+* There is no evidence of data leakage, as the split audit found 83 identical samples in both the training and validation sets.
+* The accuracy on a deduplicated holdout was 0.68, which is a reasonable value indicating that the model is not underfitting.
+
+**Next",True,True,"[0.001, 83.0, 0.68]",[]
+synthetic_v3_learning_rate_too_high_046,learning_rate_too_high,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss are increasing over epochs, indicating that the model is improving.
+* The train metric and validation metric are also increasing over epochs, indicating that the model is improving.
+* The learning rate is 0.2952, which is relatively low, indicating that the model is not overfitting.
+* The number of epochs is 10, which is a reasonable number for a text classification task.
+
+**Next experiment:** Increase the number of epochs to 20 or more to further test the model's ability to generalize.
+
+The diagnosis is healthy, indicating that the model is not overfitting and is improving over epochs. The next experiment is to",True,True,"[0.2952, 10.0]",[]
+synthetic_v3_learning_rate_too_high_029,learning_rate_too_high,healthy,False,True,"Based on the provided training metrics and configuration, I will analyze the training run.
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady improvement over epochs, indicating that the model is not overfitting.
+* The train metric and validation metric curves show a similar improvement over epochs, indicating that the model is not underfitting.
+* The learning rate is 0.0834, which is relatively low, indicating that the model is not learning rate too high.
+* The number of epochs is 12, which is a reasonable number for a sequence classification model.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a steady improvement in both train and validation metrics. The learning rate is not too high, and the number of",True,True,"[0.0834, 12.0]",[]
+synthetic_v3_overfitting_034,overfitting,healthy,False,True,"Based on the provided training metrics and configuration, here's an analysis of the training run:
+
+**Diagnosis:** Healthy
+
+**Evidence:**
+
+* The training loss and validation loss curves show a steady decrease in both metrics, indicating that the model is not overfitting or underfitting.
+* The train metric and validation metric curves show a similar trend, indicating that the model is not learning too quickly or too slowly.
+* The learning rate is 0.001339, which is relatively low, indicating that the model is not overfitting due to high learning rates.
+* The number of epochs is 10, which is a reasonable number for a text classification task.
+
+**Next experiment:** None
+
+The model appears to be performing well, with a steady decrease in training and validation losses. The",True,True,"[0.001339, 10.0]",[]

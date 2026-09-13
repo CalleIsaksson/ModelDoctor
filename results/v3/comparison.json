@@ -1,0 +1,104 @@
+{
+    "experiment": "v3",
+    "dataset_version": "controlled_synthetic_v3",
+    "base_model": "meta-llama/Llama-3.2-1B-Instruct",
+    "adapter_directory": "C:\\Users\\carl\\.vscode\\Projects\\ModelDoctor\\models\\modeldoctor_lora_v3",
+    "training_examples": 252,
+    "best_epoch": 4,
+    "baseline": {
+        "examples": 49,
+        "diagnosis_accuracy": 0.1429,
+        "parsed_rate": 1.0,
+        "format_rate": 0.8367,
+        "evidence_with_numbers_rate": 0.9184,
+        "evidence_numeric_grounding_rate": 0.9111,
+        "per_label_accuracy": {
+            "data_leakage_suspected": 0.0,
+            "healthy": 1.0,
+            "insufficient_evidence": 0.0,
+            "learning_rate_too_high": 0.0,
+            "learning_rate_too_low": 0.0,
+            "overfitting": 0.0,
+            "underfitting": 0.0
+        },
+        "validation_loss": 2.5014
+    },
+    "training_history": [
+        {
+            "epoch": 1,
+            "training_loss": 0.7305,
+            "validation_loss": 0.1138
+        },
+        {
+            "epoch": 2,
+            "training_loss": 0.0746,
+            "validation_loss": 0.0611
+        },
+        {
+            "epoch": 3,
+            "training_loss": 0.038,
+            "validation_loss": 0.0444
+        },
+        {
+            "epoch": 4,
+            "training_loss": 0.0338,
+            "validation_loss": 0.0435
+        }
+    ],
+    "finetuned": {
+        "examples": 49,
+        "diagnosis_accuracy": 0.9796,
+        "parsed_rate": 1.0,
+        "format_rate": 1.0,
+        "evidence_with_numbers_rate": 0.7959,
+        "evidence_numeric_grounding_rate": 0.8974,
+        "per_label_accuracy": {
+            "data_leakage_suspected": 1.0,
+            "healthy": 1.0,
+            "insufficient_evidence": 1.0,
+            "learning_rate_too_high": 1.0,
+            "learning_rate_too_low": 1.0,
+            "overfitting": 0.8571,
+            "underfitting": 1.0
+        },
+        "validation_loss": 0.0435
+    },
+    "challenge": {
+        "dataset": "manual_challenge_v1",
+        "examples": 21,
+        "diagnosis_accuracy": 0.8571,
+        "parsed_rate": 1.0,
+        "format_rate": 1.0,
+        "evidence_with_numbers_rate": 0.8095,
+        "evidence_numeric_grounding_rate": 0.8824,
+        "per_label_accuracy": {
+            "data_leakage_suspected": 0.6667,
+            "healthy": 1.0,
+            "insufficient_evidence": 1.0,
+            "learning_rate_too_high": 1.0,
+            "learning_rate_too_low": 0.6667,
+            "overfitting": 0.6667,
+            "underfitting": 1.0
+        },
+        "note": "This is a small manually designed challenge set, not a real-world benchmark."
+    },
+    "final": {
+        "dataset": "untouched_final_v1",
+        "examples": 35,
+        "diagnosis_accuracy": 0.8,
+        "parsed_rate": 0.9714,
+        "format_rate": 1.0,
+        "evidence_with_numbers_rate": 0.8571,
+        "evidence_numeric_grounding_rate": 0.7667,
+        "per_label_accuracy": {
+            "data_leakage_suspected": 0.2,
+            "healthy": 1.0,
+            "insufficient_evidence": 1.0,
+            "learning_rate_too_high": 1.0,
+            "learning_rate_too_low": 1.0,
+            "overfitting": 0.6,
+            "underfitting": 0.8
+        },
+        "note": "This is a controlled evaluation set, not a real-world benchmark."
+    }
+}

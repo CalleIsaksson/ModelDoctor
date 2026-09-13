@@ -1,5 +1,7 @@
 # ModelDoctor Labeling Guide
 
+Here is the guide for which diagnose the SLM should respond with when given a the results from the training and validations sets.
+
 ## overfitting
 
 Use this label when:

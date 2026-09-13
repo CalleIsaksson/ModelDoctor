@@ -1,0 +1,64 @@
+example_id,expected_diagnosis,predicted_diagnosis,correct,format_ok,answer,evidence_has_numbers,evidence_numbers_supported,evidence_numbers,unsupported_evidence_numbers
+challenge_overfitting_01,overfitting,healthy,False,True,"Diagnosis: healthy
+Evidence: Training and validation followed the same improving trend: losses ended at 0.120 and 0.960, while their metrics reached 0.980 and 0.980.
+Next experiment: Repeat the experiment once more to confirm that the stable result is reproducible.",True,True,"[0.12, 0.96, 0.98, 0.98]",[]
+challenge_overfitting_02,overfitting,overfitting,True,True,"Diagnosis: overfitting
+Evidence: The generalization gap grew after epoch 5: the final training metric was 0.999, while the validation metric fell to 0.760.
+Next experiment: Stop training near epoch 5 and evaluate that checkpoint on a separate holdout.",True,True,"[5.0, 0.999, 0.76]",[]
+challenge_overfitting_03,overfitting,overfitting,True,True,"Diagnosis: overfitting
+Evidence: The generalization gap grew after epoch 5: the final training metric was 0.940, while the validation metric fell to 0.450.
+Next experiment: Stop training near epoch 5 and evaluate that checkpoint on a separate holdout.",True,True,"[5.0, 0.94, 0.45]",[]
+challenge_underfitting_01,underfitting,underfitting,True,True,"Diagnosis: underfitting
+Evidence: Training remained poor after 7 epochs: training loss was 1.450 and training metric was 0.450. Validation values were similarly poor at 1.500 loss and 0.430 metric.
+Next experiment: Train for more epochs and, if training remains poor, test a larger model.",True,True,"[7.0, 1.45, 0.45, 1.5, 0.43]",[]
+challenge_underfitting_02,underfitting,underfitting,True,True,"Diagnosis: underfitting
+Evidence: Training remained poor after 8 epochs: training loss was 1.820 and training metric was 0.300. Validation values were similarly poor at 1.880 loss and 0.280 metric.
+Next experiment: Train for more epochs and, if training remains poor, test a larger model.",True,True,"[8.0, 1.82, 0.3, 1.88, 0.28]",[]
+challenge_underfitting_03,underfitting,underfitting,True,True,"Diagnosis: underfitting
+Evidence: Training remained poor after 7 epochs: training loss was 1.111 and training metric was 0.540. Validation values were similarly poor at 1.160 loss and 0.520 metric.
+Next experiment: Train for more epochs and, if training remains poor, test a larger model.",True,True,"[7.0, 1.111, 0.54, 1.16, 0.52]",[]
+challenge_lr_high_01,learning_rate_too_high,learning_rate_too_high,True,True,"Diagnosis: learning_rate_too_high
+Evidence: Loss oscillated throughout 7 epochs, including increases from 0.880 to 2.410 and from 0.730 to 3.120; the run did not converge.
+Next experiment: Repeat the configuration with a learning rate ten times smaller.",True,True,"[7.0, 0.88, 2.41, 0.73, 3.12]",[]
+challenge_lr_high_02,learning_rate_too_high,learning_rate_too_high,True,True,"Diagnosis: learning_rate_too_high
+Evidence: Loss oscillated throughout 8 epochs, including increases from 1.620 to 0.940 and from 2.870 to 1.210; the run did not converge.
+Next experiment: Repeat the configuration with a learning rate ten times smaller.",True,True,"[8.0, 1.62, 0.94, 2.87, 1.21]",[]
+challenge_lr_high_03,learning_rate_too_high,learning_rate_too_high,True,True,"Diagnosis: learning_rate_too_high
+Evidence: Loss oscillated throughout 6 epochs, including increases from 1.040 to 4.820 and from 1.330 to 3.910; the run did not converge.
+Next experiment: Repeat the configuration with a learning rate ten times smaller.",True,True,"[6.0, 1.04, 4.82, 1.33, 3.91]",[]
+challenge_lr_low_01,learning_rate_too_low,insufficient_evidence,False,True,"Diagnosis: insufficient_evidence
+Evidence: The losses improve but both recorded metrics become worse, so the logs are contradictory and may use an unknown metric direction or contain a logging error.
+Next experiment: Verify the metric definition and logging code, then repeat the run before diagnosing it.",False,False,[],[]
+challenge_lr_low_02,learning_rate_too_low,learning_rate_too_low,True,True,"Diagnosis: learning_rate_too_low
+Evidence: The curves moved in the right direction but very slowly: over 10 epochs training loss changed by just 0.082 and the metric changed by 0.027.
+Next experiment: Try a learning rate ten times larger while keeping the other settings fixed.",True,False,"[10.0, 0.082, 0.027]",[0.082]
+challenge_lr_low_03,learning_rate_too_low,learning_rate_too_low,True,True,"Diagnosis: learning_rate_too_low
+Evidence: The curves moved in the right direction but very slowly: over 14 epochs training loss changed by just 0.052 and the metric changed by 0.039.
+Next experiment: Try a learning rate ten times larger while keeping the other settings fixed.",True,True,"[14.0, 0.052, 0.039]",[]
+challenge_healthy_01,healthy,healthy,True,True,"Diagnosis: healthy
+Evidence: Training and validation followed the same improving trend: losses ended at 0.200 and 0.250, while their metrics reached 0.950 and 0.920.
+Next experiment: Repeat the experiment once more to confirm that the stable result is reproducible.",True,True,"[0.2, 0.25, 0.95, 0.92]",[]
+challenge_healthy_02,healthy,healthy,True,True,"Diagnosis: healthy
+Evidence: Training and validation followed the same improving trend: losses ended at 0.210 and 0.270, while their metrics reached 0.950 and 0.920.
+Next experiment: Repeat the experiment once more to confirm that the stable result is reproducible.",True,True,"[0.21, 0.27, 0.95, 0.92]",[]
+challenge_healthy_03,healthy,healthy,True,True,"Diagnosis: healthy
+Evidence: Training and validation followed the same improving trend: losses ended at 0.260 and 0.320, while their metrics reached 0.940 and 0.910.
+Next experiment: Repeat the experiment once more to confirm that the stable result is reproducible.",True,True,"[0.26, 0.32, 0.94, 0.91]",[]
+challenge_leakage_01,data_leakage_suspected,data_leakage_suspected,True,True,"Diagnosis: data_leakage_suspected
+Evidence: The audit found 1842 customer IDs shared between the training and validation splits. This was a shared training and validation checkpoint.
+Next experiment: Remove the overlap, retrain from scratch, and verify the result on a clean holdout.",True,True,[1842.0],[]
+challenge_leakage_02,data_leakage_suspected,data_leakage_suspected,True,True,"Diagnosis: data_leakage_suspected
+Evidence: Preprocessing was fitted before the split, so validation information entered the training pipeline. Validation metric was 0.97, compared with 0.94 training metric.
+Next experiment: Rebuild the splits around independent groups, then rerun preprocessing and training.",True,True,"[0.97, 0.94]",[]
+challenge_leakage_03,data_leakage_suspected,underfitting,False,True,"Diagnosis: underfitting
+Evidence: The model still performed poorly on its training data after 4 epochs, with a 0.071 accuracy. Validation performance was similarly weak at 0.990.
+Next experiment: Continue training and compare the result with a larger architecture using the same split.",True,False,"[4.0, 0.071, 0.99]",[0.071]
+challenge_insufficient_01,insufficient_evidence,insufficient_evidence,True,True,"Diagnosis: insufficient_evidence
+Evidence: Only one epoch is available, so no training or validation trend can be established.
+Next experiment: Continue training for more epochs and record both training and validation metrics.",False,False,[],[]
+challenge_insufficient_02,insufficient_evidence,insufficient_evidence,True,True,"Diagnosis: insufficient_evidence
+Evidence: Validation loss and validation metric are not recorded, so the available information is incomplete and does not support a reliable diagnosis.
+Next experiment: Run the experiment again with validation loss and validation metric logging enabled.",False,False,[],[]
+challenge_insufficient_03,insufficient_evidence,insufficient_evidence,True,True,"Diagnosis: insufficient_evidence
+Evidence: Only two epochs are available and both training and validation metrics are poor, so the early loss decrease does not support a specific diagnosis.
+Next experiment: Continue training for more epochs and record both training and validation metrics.",False,False,[],[]

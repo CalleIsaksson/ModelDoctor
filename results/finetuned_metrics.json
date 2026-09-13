@@ -1,0 +1,16 @@
+{
+    "examples": 35,
+    "diagnosis_accuracy": 1.0,
+    "parsed_rate": 1.0,
+    "format_rate": 1.0,
+    "per_label_accuracy": {
+        "data_leakage_suspected": 1.0,
+        "healthy": 1.0,
+        "insufficient_evidence": 1.0,
+        "learning_rate_too_high": 1.0,
+        "learning_rate_too_low": 1.0,
+        "overfitting": 1.0,
+        "underfitting": 1.0
+    },
+    "validation_loss": 0.0294
+}

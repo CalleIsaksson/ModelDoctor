@@ -1,0 +1,71 @@
+{
+    "base_model": "meta-llama/Llama-3.2-1B-Instruct",
+    "adapter_directory": "C:\\Users\\carl\\.vscode\\Projects\\ModelDoctor\\models\\modeldoctor_lora",
+    "training_examples": 140,
+    "baseline": {
+        "examples": 35,
+        "diagnosis_accuracy": 0.1429,
+        "parsed_rate": 1.0,
+        "format_rate": 0.7429,
+        "per_label_accuracy": {
+            "data_leakage_suspected": 0.0,
+            "healthy": 0.0,
+            "insufficient_evidence": 0.0,
+            "learning_rate_too_high": 0.0,
+            "learning_rate_too_low": 0.0,
+            "overfitting": 1.0,
+            "underfitting": 0.0
+        },
+        "validation_loss": 2.1607
+    },
+    "training_history": [
+        {
+            "epoch": 1,
+            "training_loss": 0.4296,
+            "validation_loss": 0.0498
+        },
+        {
+            "epoch": 2,
+            "training_loss": 0.032,
+            "validation_loss": 0.0276
+        },
+        {
+            "epoch": 3,
+            "training_loss": 0.0156,
+            "validation_loss": 0.0294
+        }
+    ],
+    "finetuned": {
+        "examples": 35,
+        "diagnosis_accuracy": 1.0,
+        "parsed_rate": 1.0,
+        "format_rate": 1.0,
+        "per_label_accuracy": {
+            "data_leakage_suspected": 1.0,
+            "healthy": 1.0,
+            "insufficient_evidence": 1.0,
+            "learning_rate_too_high": 1.0,
+            "learning_rate_too_low": 1.0,
+            "overfitting": 1.0,
+            "underfitting": 1.0
+        },
+        "validation_loss": 0.0294
+    },
+    "challenge": {
+        "dataset": "manual_challenge_v1",
+        "examples": 21,
+        "diagnosis_accuracy": 0.5238,
+        "parsed_rate": 1.0,
+        "format_rate": 1.0,
+        "per_label_accuracy": {
+            "data_leakage_suspected": 1.0,
+            "healthy": 0.3333,
+            "insufficient_evidence": 1.0,
+            "learning_rate_too_high": 0.6667,
+            "learning_rate_too_low": 0.3333,
+            "overfitting": 0.0,
+            "underfitting": 0.3333
+        },
+        "note": "This is a small manually designed challenge set, not a real-world benchmark."
+    }
+}
