@@ -1,0 +1,35 @@
+[
+  {
+    "id": "generalization",
+    "name": "Kurvor som går åt olika håll",
+    "file": "rnn_training_log.csv",
+    "description": "Träningsfel sjunker medan valideringsfel ökar.",
+    "architecture": "RNN",
+    "category": "hyperparameter_fault",
+    "epochs": 50,
+    "source_example_id": "deep4ge_06106",
+    "source_sha256": "afedc8f2596f6d795cb3095e75542fda48e7e7f75c04d5af9c75a0cc5232f46b"
+  },
+  {
+    "id": "baseline",
+    "name": "En publicerad referenskörning",
+    "file": "baseline_training_log.csv",
+    "description": "Uppmätta resultat från ett experiment utan injicerad ändring.",
+    "architecture": "RNN",
+    "category": "no_injected_fault",
+    "epochs": 50,
+    "source_example_id": "deep4ge_12583",
+    "source_sha256": "e1144f1bdb5434b6d0dd1d5bc75610618bd41ee3b785b3924f4acd9af1d94d24"
+  },
+  {
+    "id": "loss",
+    "name": "Träningsresultat på en annan skala",
+    "file": "loss_training_log.csv",
+    "description": "Undersök hur skalan påverkar tolkningen av kurvorna.",
+    "architecture": "RNN",
+    "category": "loss_fault",
+    "epochs": 50,
+    "source_example_id": "deep4ge_06244",
+    "source_sha256": "aa6b77d4773284610e8d9af5bf921901c99476fb2c1b31eb60bd0806cf03b7d9"
+  }
+]

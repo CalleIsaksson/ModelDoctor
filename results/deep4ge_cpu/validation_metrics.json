@@ -1,0 +1,1298 @@
+{
+  "model": "RandomForestClassifier",
+  "evaluation_split": "validation",
+  "test_evaluated": false,
+  "training_examples": 10014,
+  "validation_examples": 1827,
+  "settings": {
+    "n_estimators": 200,
+    "max_depth": 12,
+    "min_samples_leaf": 3,
+    "class_weight": "balanced_subsample",
+    "random_state": 42,
+    "n_jobs": 2
+  },
+  "sklearn_version": "1.9.1",
+  "dataset_csv_sha256": {
+    "modeldoctor_train.csv": "c9a263768fe7733699dd05f7975ec782f4dc44b3960ef81481f64a8fdaccf7b2",
+    "modeldoctor_validation.csv": "3437ffb326f2f53a804eeacf1379d7e1e7ff8b587f9684dd8074931a18eb42b1",
+    "modeldoctor_test.csv": "3d648bc1e3dccaa35dbe38da0c9d89fb527dcfd579d83948b4b07e47a5c3c0a5"
+  },
+  "source_revision": "1d895afac1985876f289fbcdc2ee56c62f612071",
+  "preprocessing": "Observed inputs only; vectorizer and median imputer fitted exclusively on training.",
+  "feature_count": 244,
+  "random_forest": {
+    "examples": 1827,
+    "accuracy": 0.34318555008210183,
+    "macro_f1": 0.26382135535957324,
+    "balanced_accuracy": 0.38943719027759555,
+    "parsed_rate": 1.0,
+    "per_label": {
+      "no_injected_fault": {
+        "support": 637,
+        "precision": 0.46153846153846156,
+        "recall": 0.009419152276295133,
+        "f1": 0.01846153846153846
+      },
+      "hyperparameter_fault": {
+        "support": 224,
+        "precision": 0.046263345195729534,
+        "recall": 0.05803571428571429,
+        "f1": 0.05148514851485148
+      },
+      "layer_fault": {
+        "support": 193,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "loss_fault": {
+        "support": 306,
+        "precision": 0.5176678445229682,
+        "recall": 0.9575163398692811,
+        "f1": 0.6720183486238532
+      },
+      "activation_fault": {
+        "support": 24,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "optimization_fault": {
+        "support": 180,
+        "precision": 0.18404907975460122,
+        "recall": 0.5,
+        "f1": 0.2690582959641255
+      },
+      "weight_fault": {
+        "support": 225,
+        "precision": 0.9705882352941176,
+        "recall": 0.88,
+        "f1": 0.9230769230769231
+      },
+      "regularization_fault": {
+        "support": 38,
+        "precision": 0.10074626865671642,
+        "recall": 0.7105263157894737,
+        "f1": 0.17647058823529413
+      }
+    },
+    "confusion_matrix": {
+      "no_injected_fault": {
+        "no_injected_fault": 6,
+        "hyperparameter_fault": 204,
+        "layer_fault": 0,
+        "loss_fault": 125,
+        "activation_fault": 0,
+        "optimization_fault": 192,
+        "weight_fault": 0,
+        "regularization_fault": 110,
+        "unparsed": 0
+      },
+      "hyperparameter_fault": {
+        "no_injected_fault": 0,
+        "hyperparameter_fault": 13,
+        "layer_fault": 0,
+        "loss_fault": 98,
+        "activation_fault": 0,
+        "optimization_fault": 113,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "layer_fault": {
+        "no_injected_fault": 2,
+        "hyperparameter_fault": 62,
+        "layer_fault": 0,
+        "loss_fault": 36,
+        "activation_fault": 1,
+        "optimization_fault": 67,
+        "weight_fault": 0,
+        "regularization_fault": 25,
+        "unparsed": 0
+      },
+      "loss_fault": {
+        "no_injected_fault": 1,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 293,
+        "activation_fault": 0,
+        "optimization_fault": 7,
+        "weight_fault": 0,
+        "regularization_fault": 5,
+        "unparsed": 0
+      },
+      "activation_fault": {
+        "no_injected_fault": 0,
+        "hyperparameter_fault": 1,
+        "layer_fault": 0,
+        "loss_fault": 14,
+        "activation_fault": 0,
+        "optimization_fault": 9,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "optimization_fault": {
+        "no_injected_fault": 0,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 90,
+        "weight_fault": 0,
+        "regularization_fault": 90,
+        "unparsed": 0
+      },
+      "weight_fault": {
+        "no_injected_fault": 0,
+        "hyperparameter_fault": 1,
+        "layer_fault": 4,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 11,
+        "weight_fault": 198,
+        "regularization_fault": 11,
+        "unparsed": 0
+      },
+      "regularization_fault": {
+        "no_injected_fault": 4,
+        "hyperparameter_fault": 0,
+        "layer_fault": 1,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 6,
+        "regularization_fault": 27,
+        "unparsed": 0
+      }
+    }
+  },
+  "majority_class": "no_injected_fault",
+  "majority_baseline": {
+    "examples": 1827,
+    "accuracy": 0.3486590038314176,
+    "macro_f1": 0.06463068181818181,
+    "balanced_accuracy": 0.125,
+    "parsed_rate": 1.0,
+    "per_label": {
+      "no_injected_fault": {
+        "support": 637,
+        "precision": 0.3486590038314176,
+        "recall": 1.0,
+        "f1": 0.5170454545454545
+      },
+      "hyperparameter_fault": {
+        "support": 224,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "layer_fault": {
+        "support": 193,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "loss_fault": {
+        "support": 306,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "activation_fault": {
+        "support": 24,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "optimization_fault": {
+        "support": 180,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "weight_fault": {
+        "support": 225,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "regularization_fault": {
+        "support": 38,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "no_injected_fault": {
+        "no_injected_fault": 637,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "hyperparameter_fault": {
+        "no_injected_fault": 224,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "layer_fault": {
+        "no_injected_fault": 193,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "loss_fault": {
+        "no_injected_fault": 306,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "activation_fault": {
+        "no_injected_fault": 24,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "optimization_fault": {
+        "no_injected_fault": 180,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "weight_fault": {
+        "no_injected_fault": 225,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      },
+      "regularization_fault": {
+        "no_injected_fault": 38,
+        "hyperparameter_fault": 0,
+        "layer_fault": 0,
+        "loss_fault": 0,
+        "activation_fault": 0,
+        "optimization_fault": 0,
+        "weight_fault": 0,
+        "regularization_fault": 0,
+        "unparsed": 0
+      }
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "train_loss_min",
+      "importance": 0.02173334981990402
+    },
+    {
+      "feature": "adjusted_lr_mean",
+      "importance": 0.018815891926929267
+    },
+    {
+      "feature": "adjusted_lr_first",
+      "importance": 0.018553675788688162
+    },
+    {
+      "feature": "val_loss_min",
+      "importance": 0.01815005378226753
+    },
+    {
+      "feature": "train_loss_mean",
+      "importance": 0.017711516535721304
+    },
+    {
+      "feature": "train_loss_first",
+      "importance": 0.017153273718228234
+    },
+    {
+      "feature": "val_loss_first",
+      "importance": 0.017095173854222233
+    },
+    {
+      "feature": "adjusted_lr_last",
+      "importance": 0.016992232144047426
+    },
+    {
+      "feature": "std_activation_first",
+      "importance": 0.01696491160587248
+    },
+    {
+      "feature": "train_loss_max",
+      "importance": 0.016581066948878367
+    },
+    {
+      "feature": "val_loss_last",
+      "importance": 0.01653797469317184
+    },
+    {
+      "feature": "gradient_max_mean",
+      "importance": 0.016515608844619376
+    },
+    {
+      "feature": "adjusted_lr_min",
+      "importance": 0.016496251114840595
+    },
+    {
+      "feature": "train_loss_last",
+      "importance": 0.01620162458416622
+    },
+    {
+      "feature": "val_loss_mean",
+      "importance": 0.016138316830682703
+    },
+    {
+      "feature": "adjusted_lr_max",
+      "importance": 0.015640675424933664
+    },
+    {
+      "feature": "missingindicator_train_acc_min",
+      "importance": 0.015509634682318712
+    },
+    {
+      "feature": "std_activation_min",
+      "importance": 0.015247143533049607
+    },
+    {
+      "feature": "std_activation_max",
+      "importance": 0.014504380573542147
+    },
+    {
+      "feature": "val_loss_max",
+      "importance": 0.014335483568146935
+    },
+    {
+      "feature": "std_grad_mean",
+      "importance": 0.014210295359488314
+    },
+    {
+      "feature": "gradient_std_mean",
+      "importance": 0.014163897928107487
+    },
+    {
+      "feature": "std_activation_mean",
+      "importance": 0.014095062824197957
+    },
+    {
+      "feature": "gradient_median_first",
+      "importance": 0.013978813035937263
+    },
+    {
+      "feature": "gradient_max_min",
+      "importance": 0.013978256321220637
+    },
+    {
+      "feature": "mean_gradient_mean",
+      "importance": 0.01281547615939789
+    },
+    {
+      "feature": "std_activation_last",
+      "importance": 0.01209175537779952
+    },
+    {
+      "feature": "mean_grad_min",
+      "importance": 0.011761590373693988
+    },
+    {
+      "feature": "mean_activation_max",
+      "importance": 0.011570144853640415
+    },
+    {
+      "feature": "std_grad_min",
+      "importance": 0.011560229295728384
+    },
+    {
+      "feature": "mean_gradient_last",
+      "importance": 0.011393378474681217
+    },
+    {
+      "feature": "mean_gradient_min",
+      "importance": 0.011280616686463409
+    },
+    {
+      "feature": "gradient_std_min",
+      "importance": 0.010860961549802643
+    },
+    {
+      "feature": "gradient_median_mean",
+      "importance": 0.010776143762416826
+    },
+    {
+      "feature": "gradient_std_last",
+      "importance": 0.01074139049088616
+    },
+    {
+      "feature": "missingindicator_train_acc_mean",
+      "importance": 0.010730074220881671
+    },
+    {
+      "feature": "mean_activation_mean",
+      "importance": 0.010637318734106034
+    },
+    {
+      "feature": "mean_grad_max",
+      "importance": 0.010587561732232392
+    },
+    {
+      "feature": "gradient_median_min",
+      "importance": 0.01056756793915664
+    },
+    {
+      "feature": "std_grad_last",
+      "importance": 0.01056742449524667
+    },
+    {
+      "feature": "mean_activation_first",
+      "importance": 0.010483953487133
+    },
+    {
+      "feature": "std_grad_max",
+      "importance": 0.010241393256264988
+    },
+    {
+      "feature": "val_loss_change",
+      "importance": 0.010215419549128926
+    },
+    {
+      "feature": "missingindicator_train_acc_first",
+      "importance": 0.01016925537207751
+    },
+    {
+      "feature": "gradient_max_last",
+      "importance": 0.010058595020719492
+    },
+    {
+      "feature": "mean_activation_last",
+      "importance": 0.010020732974613528
+    },
+    {
+      "feature": "train_loss_change",
+      "importance": 0.009902185767858404
+    },
+    {
+      "feature": "architecture_CNN",
+      "importance": 0.009612097564790712
+    },
+    {
+      "feature": "gradient_std_first",
+      "importance": 0.009576355471207781
+    },
+    {
+      "feature": "mean_gradient_first",
+      "importance": 0.009431237761085792
+    },
+    {
+      "feature": "gradient_max_max",
+      "importance": 0.00940407308035449
+    },
+    {
+      "feature": "gradient_max_first",
+      "importance": 0.00936477048343765
+    },
+    {
+      "feature": "mean_gradient_max",
+      "importance": 0.009228469534777121
+    },
+    {
+      "feature": "missingindicator_train_acc_max",
+      "importance": 0.008971940725752086
+    },
+    {
+      "feature": "mean_activation_min",
+      "importance": 0.008640809698692764
+    },
+    {
+      "feature": "gradient_min_mean",
+      "importance": 0.008527028361935257
+    },
+    {
+      "feature": "missingindicator_val_acc_change",
+      "importance": 0.008426843555901379
+    },
+    {
+      "feature": "gradient_std_max",
+      "importance": 0.008182883362894936
+    },
+    {
+      "feature": "gradient_median_max",
+      "importance": 0.008164498538490987
+    },
+    {
+      "feature": "architecture_RNN",
+      "importance": 0.008136434787391485
+    },
+    {
+      "feature": "val_acc_missing_rate",
+      "importance": 0.008090896338492876
+    },
+    {
+      "feature": "missingindicator_val_acc_first",
+      "importance": 0.008031065529198932
+    },
+    {
+      "feature": "missingindicator_val_acc_mean",
+      "importance": 0.007721541000371567
+    },
+    {
+      "feature": "final_loss_gap",
+      "importance": 0.00770599762234645
+    },
+    {
+      "feature": "train_acc_mean",
+      "importance": 0.00767901954079381
+    },
+    {
+      "feature": "val_acc_mean",
+      "importance": 0.007532426131264392
+    },
+    {
+      "feature": "train_acc_min",
+      "importance": 0.007500154869749594
+    },
+    {
+      "feature": "missingindicator_final_metric_gap",
+      "importance": 0.007275541103351468
+    },
+    {
+      "feature": "val_acc_last",
+      "importance": 0.007250061647748953
+    },
+    {
+      "feature": "gradient_median_last",
+      "importance": 0.007087463581098675
+    },
+    {
+      "feature": "gradient_min_first",
+      "importance": 0.007056375389305868
+    },
+    {
+      "feature": "train_acc_last",
+      "importance": 0.007007095685793049
+    },
+    {
+      "feature": "missingindicator_train_acc_change",
+      "importance": 0.006760709389467187
+    },
+    {
+      "feature": "missingindicator_val_acc_last",
+      "importance": 0.00673565599661219
+    },
+    {
+      "feature": "gradient_min_min",
+      "importance": 0.006658635817482567
+    },
+    {
+      "feature": "train_acc_max",
+      "importance": 0.006263922692248828
+    },
+    {
+      "feature": "std_grad_first",
+      "importance": 0.006182467094711269
+    },
+    {
+      "feature": "missingindicator_val_acc_max",
+      "importance": 0.006164966105803728
+    },
+    {
+      "feature": "train_acc_missing_rate",
+      "importance": 0.006164657030722483
+    },
+    {
+      "feature": "gradient_min_max",
+      "importance": 0.0058506488759444315
+    },
+    {
+      "feature": "gradient_min_last",
+      "importance": 0.005840387435509372
+    },
+    {
+      "feature": "val_acc_min",
+      "importance": 0.005793341171457629
+    },
+    {
+      "feature": "gradient_vanish_mean",
+      "importance": 0.005764823057316508
+    },
+    {
+      "feature": "val_acc_first",
+      "importance": 0.00573840116628775
+    },
+    {
+      "feature": "train_acc_first",
+      "importance": 0.005671965785651339
+    },
+    {
+      "feature": "loss_oscillation_mean",
+      "importance": 0.005329838651288349
+    },
+    {
+      "feature": "missingindicator_val_acc_min",
+      "importance": 0.005156040317666042
+    },
+    {
+      "feature": "train_acc_change",
+      "importance": 0.005010239402213289
+    },
+    {
+      "feature": "architecture_FNN",
+      "importance": 0.004870028053449017
+    },
+    {
+      "feature": "val_acc_max",
+      "importance": 0.004847657231675794
+    },
+    {
+      "feature": "mean_grad_mean",
+      "importance": 0.004368453037130554
+    },
+    {
+      "feature": "final_metric_gap",
+      "importance": 0.004163647445466481
+    },
+    {
+      "feature": "mean_grad_first",
+      "importance": 0.0036543145634286194
+    },
+    {
+      "feature": "gradient_vanish_first",
+      "importance": 0.0035485675997193687
+    },
+    {
+      "feature": "mean_grad_last",
+      "importance": 0.0029724672411159153
+    },
+    {
+      "feature": "missingindicator_train_acc_last",
+      "importance": 0.002968189717174027
+    },
+    {
+      "feature": "acc_gap_too_big_mean",
+      "importance": 0.002564173993717071
+    },
+    {
+      "feature": "gradient_vanish_min",
+      "importance": 0.0021505771250270186
+    },
+    {
+      "feature": "val_acc_change",
+      "importance": 0.0017425234738162728
+    },
+    {
+      "feature": "loss_oscillation_max",
+      "importance": 0.0014792220370875185
+    },
+    {
+      "feature": "dying_relu_mean",
+      "importance": 0.001178225309380137
+    },
+    {
+      "feature": "acc_gap_too_big_last",
+      "importance": 0.001054105275277716
+    },
+    {
+      "feature": "gradient_vanish_last",
+      "importance": 0.0010353345810684574
+    },
+    {
+      "feature": "acc_gap_too_big_max",
+      "importance": 0.0007256780674175002
+    },
+    {
+      "feature": "gradient_explode_mean",
+      "importance": 0.0007228676920820392
+    },
+    {
+      "feature": "dying_relu_last",
+      "importance": 0.0006386986134115522
+    },
+    {
+      "feature": "dying_relu_max",
+      "importance": 0.0005967629341844015
+    },
+    {
+      "feature": "gradient_vanish_max",
+      "importance": 0.0005866401455205048
+    },
+    {
+      "feature": "loss_oscillation_last",
+      "importance": 0.0005552486082585292
+    },
+    {
+      "feature": "large_weight_count_last",
+      "importance": 0.0005489168549227859
+    },
+    {
+      "feature": "large_weight_count_mean",
+      "importance": 0.00043961831427472557
+    },
+    {
+      "feature": "dying_relu_min",
+      "importance": 0.00043642878099609434
+    },
+    {
+      "feature": "large_weight_count_max",
+      "importance": 0.00041686556448738624
+    },
+    {
+      "feature": "large_weight_count_min",
+      "importance": 0.00034820872673294327
+    },
+    {
+      "feature": "dying_relu_first",
+      "importance": 0.00033943479696283264
+    },
+    {
+      "feature": "gradient_explode_max",
+      "importance": 0.000338377820252171
+    },
+    {
+      "feature": "acc_gap_too_big_first",
+      "importance": 0.0002974019021799439
+    },
+    {
+      "feature": "gradient_explode_first",
+      "importance": 0.0002890850607679191
+    },
+    {
+      "feature": "cons_mean_weight_count_last",
+      "importance": 0.00013014958923480207
+    },
+    {
+      "feature": "missingindicator_train_loss_last",
+      "importance": 0.00012376455315452067
+    },
+    {
+      "feature": "nan_weight_count_mean",
+      "importance": 0.00011362262922351317
+    },
+    {
+      "feature": "missingindicator_train_loss_change",
+      "importance": 0.00010748564978201197
+    },
+    {
+      "feature": "large_weight_count_first",
+      "importance": 0.00010296684232107873
+    },
+    {
+      "feature": "nan_weight_count_last",
+      "importance": 9.145971239398214e-05
+    },
+    {
+      "feature": "cons_mean_weight_count_min",
+      "importance": 9.010257377590598e-05
+    },
+    {
+      "feature": "val_loss_missing_rate",
+      "importance": 8.353024123425304e-05
+    },
+    {
+      "feature": "gradient_explode_last",
+      "importance": 7.371123955746158e-05
+    },
+    {
+      "feature": "nan_gradients_count_max",
+      "importance": 6.967441139649038e-05
+    },
+    {
+      "feature": "cons_mean_weight_count_mean",
+      "importance": 6.932337102191213e-05
+    },
+    {
+      "feature": "missingindicator_gradient_median_min",
+      "importance": 6.905473891959483e-05
+    },
+    {
+      "feature": "gradient_min_missing",
+      "importance": 6.865882131927303e-05
+    },
+    {
+      "feature": "mean_activation_missing",
+      "importance": 6.856423726120069e-05
+    },
+    {
+      "feature": "missingindicator_final_loss_gap",
+      "importance": 6.83195248096621e-05
+    },
+    {
+      "feature": "missingindicator_gradient_median_last",
+      "importance": 6.777603206008912e-05
+    },
+    {
+      "feature": "missingindicator_gradient_min_last",
+      "importance": 6.740706033636401e-05
+    },
+    {
+      "feature": "missingindicator_gradient_std_last",
+      "importance": 6.524595896463051e-05
+    },
+    {
+      "feature": "missingindicator_gradient_min_mean",
+      "importance": 6.0189632411645454e-05
+    },
+    {
+      "feature": "cons_std_weight_count_mean",
+      "importance": 6.0136377235695686e-05
+    },
+    {
+      "feature": "missingindicator_mean_grad_last",
+      "importance": 5.77819418804621e-05
+    },
+    {
+      "feature": "missingindicator_mean_grad_max",
+      "importance": 5.7243467977826874e-05
+    },
+    {
+      "feature": "cons_std_weight_count_last",
+      "importance": 5.516152396120149e-05
+    },
+    {
+      "feature": "gradient_explode_min",
+      "importance": 5.439638445751276e-05
+    },
+    {
+      "feature": "gradient_std_missing",
+      "importance": 5.2996985880855684e-05
+    },
+    {
+      "feature": "gradient_median_missing",
+      "importance": 5.249852505775936e-05
+    },
+    {
+      "feature": "missingindicator_train_loss_mean",
+      "importance": 5.147074501084841e-05
+    },
+    {
+      "feature": "missingindicator_mean_activation_max",
+      "importance": 5.121024237841865e-05
+    },
+    {
+      "feature": "nan_gradients_count_last",
+      "importance": 4.70052998349747e-05
+    },
+    {
+      "feature": "missingindicator_mean_grad_first",
+      "importance": 4.582268343841975e-05
+    },
+    {
+      "feature": "gradient_max_missing",
+      "importance": 4.237289307374211e-05
+    },
+    {
+      "feature": "missingindicator_mean_gradient_max",
+      "importance": 4.198608218859598e-05
+    },
+    {
+      "feature": "cons_std_weight_count_min",
+      "importance": 4.106123932042491e-05
+    },
+    {
+      "feature": "mean_gradient_missing",
+      "importance": 4.0131215314284996e-05
+    },
+    {
+      "feature": "mean_grad_missing",
+      "importance": 4.0074717245205594e-05
+    },
+    {
+      "feature": "cons_mean_weight_count_first",
+      "importance": 3.98178074655167e-05
+    },
+    {
+      "feature": "acc_gap_too_big_min",
+      "importance": 3.803195474933823e-05
+    },
+    {
+      "feature": "missingindicator_std_grad_last",
+      "importance": 3.668293396657941e-05
+    },
+    {
+      "feature": "missingindicator_gradient_min_max",
+      "importance": 3.6633408631489675e-05
+    },
+    {
+      "feature": "missingindicator_val_loss_change",
+      "importance": 3.5696302430428504e-05
+    },
+    {
+      "feature": "missingindicator_std_activation_min",
+      "importance": 3.535111904988612e-05
+    },
+    {
+      "feature": "cons_mean_weight_count_max",
+      "importance": 3.348634017646218e-05
+    },
+    {
+      "feature": "train_loss_missing_rate",
+      "importance": 3.161078737835078e-05
+    },
+    {
+      "feature": "nan_gradients_count_mean",
+      "importance": 3.12736871859087e-05
+    },
+    {
+      "feature": "nan_weight_count_min",
+      "importance": 3.0133999898001305e-05
+    },
+    {
+      "feature": "missingindicator_val_loss_mean",
+      "importance": 2.959184091703257e-05
+    },
+    {
+      "feature": "missingindicator_val_loss_min",
+      "importance": 2.6161949034262884e-05
+    },
+    {
+      "feature": "missingindicator_val_loss_first",
+      "importance": 2.5459543833474745e-05
+    },
+    {
+      "feature": "std_grad_missing",
+      "importance": 2.2279626018472983e-05
+    },
+    {
+      "feature": "missingindicator_gradient_std_min",
+      "importance": 2.1888949685446763e-05
+    },
+    {
+      "feature": "nan_weight_count_max",
+      "importance": 2.1785690512769958e-05
+    },
+    {
+      "feature": "num_epochs",
+      "importance": 2.1713089942814566e-05
+    },
+    {
+      "feature": "missingindicator_mean_activation_last",
+      "importance": 2.0414819552808218e-05
+    },
+    {
+      "feature": "missingindicator_train_loss_max",
+      "importance": 1.9932904798090348e-05
+    },
+    {
+      "feature": "missingindicator_std_grad_max",
+      "importance": 1.9448699578093264e-05
+    },
+    {
+      "feature": "missingindicator_gradient_median_mean",
+      "importance": 1.9317029583426832e-05
+    },
+    {
+      "feature": "missingindicator_train_loss_min",
+      "importance": 1.7950458951683924e-05
+    },
+    {
+      "feature": "missingindicator_val_loss_max",
+      "importance": 1.7772214370813823e-05
+    },
+    {
+      "feature": "missingindicator_std_activation_first",
+      "importance": 1.6331433074836575e-05
+    },
+    {
+      "feature": "missingindicator_gradient_max_last",
+      "importance": 1.604262130168489e-05
+    },
+    {
+      "feature": "missingindicator_std_activation_mean",
+      "importance": 1.0170781910191024e-05
+    },
+    {
+      "feature": "missingindicator_train_loss_first",
+      "importance": 9.84973153226942e-06
+    },
+    {
+      "feature": "missingindicator_gradient_std_mean",
+      "importance": 7.4025959807869956e-06
+    },
+    {
+      "feature": "missingindicator_gradient_max_first",
+      "importance": 6.3329197395318584e-06
+    },
+    {
+      "feature": "missingindicator_gradient_median_max",
+      "importance": 6.319098758976246e-06
+    },
+    {
+      "feature": "std_activation_missing",
+      "importance": 3.1575763872744523e-06
+    },
+    {
+      "feature": "missingindicator_std_activation_last",
+      "importance": 2.363999459923974e-06
+    },
+    {
+      "feature": "missingindicator_mean_grad_min",
+      "importance": 1.2948113863839144e-16
+    },
+    {
+      "feature": "missingindicator_std_grad_mean",
+      "importance": 8.170625520826363e-17
+    },
+    {
+      "feature": "missingindicator_mean_gradient_min",
+      "importance": 2.5555028951821935e-17
+    },
+    {
+      "feature": "missingindicator_std_grad_first",
+      "importance": 4.703388361955204e-18
+    },
+    {
+      "feature": "nan_gradients_count_first",
+      "importance": 2.6371281304873977e-18
+    },
+    {
+      "feature": "missingindicator_std_activation_max",
+      "importance": 9.59758534726572e-19
+    },
+    {
+      "feature": "missingindicator_mean_gradient_first",
+      "importance": 6.22488995761225e-19
+    },
+    {
+      "feature": "missingindicator_mean_activation_mean",
+      "importance": 4.412026384680163e-19
+    },
+    {
+      "feature": "missingindicator_val_loss_last",
+      "importance": 2.3060061116124356e-19
+    },
+    {
+      "feature": "nan_gradients_count_min",
+      "importance": 2.1946585737419146e-20
+    },
+    {
+      "feature": "missingindicator_mean_gradient_last",
+      "importance": 1.7004873257081388e-20
+    },
+    {
+      "feature": "acc_gap_too_big_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "adjusted_lr_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "architecture_unknown",
+      "importance": 0.0
+    },
+    {
+      "feature": "cons_mean_weight_count_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "cons_std_weight_count_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "cons_std_weight_count_max",
+      "importance": 0.0
+    },
+    {
+      "feature": "cons_std_weight_count_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "decrease_acc_count_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "decrease_acc_count_last",
+      "importance": 0.0
+    },
+    {
+      "feature": "decrease_acc_count_max",
+      "importance": 0.0
+    },
+    {
+      "feature": "decrease_acc_count_mean",
+      "importance": 0.0
+    },
+    {
+      "feature": "decrease_acc_count_min",
+      "importance": 0.0
+    },
+    {
+      "feature": "decrease_acc_count_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "dying_relu_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "gradient_explode_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "gradient_vanish_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "increase_loss_count_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "increase_loss_count_last",
+      "importance": 0.0
+    },
+    {
+      "feature": "increase_loss_count_max",
+      "importance": 0.0
+    },
+    {
+      "feature": "increase_loss_count_mean",
+      "importance": 0.0
+    },
+    {
+      "feature": "increase_loss_count_min",
+      "importance": 0.0
+    },
+    {
+      "feature": "increase_loss_count_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "large_weight_count_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "loss_oscillation_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "loss_oscillation_min",
+      "importance": 0.0
+    },
+    {
+      "feature": "loss_oscillation_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "nan_gradients_count_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "nan_weight_count_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "nan_weight_count_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "saturated_activation_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "saturated_activation_last",
+      "importance": 0.0
+    },
+    {
+      "feature": "saturated_activation_max",
+      "importance": 0.0
+    },
+    {
+      "feature": "saturated_activation_mean",
+      "importance": 0.0
+    },
+    {
+      "feature": "saturated_activation_min",
+      "importance": 0.0
+    },
+    {
+      "feature": "saturated_activation_missing",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_max_max",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_max_mean",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_max_min",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_median_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_min_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_min_min",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_std_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_gradient_std_max",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_mean_activation_first",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_mean_activation_min",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_mean_grad_mean",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_mean_gradient_mean",
+      "importance": 0.0
+    },
+    {
+      "feature": "missingindicator_std_grad_min",
+      "importance": 0.0
+    }
+  ],
+  "note": "Fixed baseline settings, no validation tuning. Feature importance describes association, not causation. No Llama training or final test evaluation."
+}

@@ -1,0 +1,73 @@
+{
+  "review_split": "train",
+  "test_evaluated": false,
+  "source_revision": "1d895afac1985876f289fbcdc2ee56c62f612071",
+  "dataset_csv_sha256": {
+    "modeldoctor_train.csv": "c9a263768fe7733699dd05f7975ec782f4dc44b3960ef81481f64a8fdaccf7b2",
+    "modeldoctor_validation.csv": "3437ffb326f2f53a804eeacf1379d7e1e7ff8b587f9684dd8074931a18eb42b1",
+    "modeldoctor_test.csv": "3d648bc1e3dccaa35dbe38da0c9d89fb527dcfd579d83948b4b07e47a5c3c0a5"
+  },
+  "plotted_examples": 24,
+  "source_to_input_checks_passed": true,
+  "selection": "Seed 42; 3 examples per category; diverse source programs first.",
+  "audit": {
+    "examples": 10014,
+    "categories": {
+      "weight_fault": 1271,
+      "no_injected_fault": 3010,
+      "optimization_fault": 880,
+      "loss_fault": 1642,
+      "layer_fault": 937,
+      "hyperparameter_fault": 1951,
+      "regularization_fault": 177,
+      "activation_fault": 146
+    },
+    "curves": {
+      "train_loss": {
+        "examples_with_missing_sample": 122,
+        "fully_missing_examples": 84,
+        "flat_sampled_examples": 96
+      },
+      "val_loss": {
+        "examples_with_missing_sample": 122,
+        "fully_missing_examples": 82,
+        "flat_sampled_examples": 450
+      },
+      "train_acc": {
+        "examples_with_missing_sample": 848,
+        "fully_missing_examples": 818,
+        "flat_sampled_examples": 1476
+      },
+      "val_acc": {
+        "examples_with_missing_sample": 848,
+        "fully_missing_examples": 826,
+        "flat_sampled_examples": 3001
+      }
+    },
+    "dynamic_fully_missing_examples": {
+      "large_weight_count": 0,
+      "acc_gap_too_big": 0,
+      "loss_oscillation": 0,
+      "dying_relu": 0,
+      "gradient_vanish": 0,
+      "gradient_explode": 0,
+      "decrease_acc_count": 0,
+      "increase_loss_count": 0,
+      "cons_mean_weight_count": 0,
+      "cons_std_weight_count": 0,
+      "nan_weight_count": 0,
+      "nan_gradients_count": 0,
+      "saturated_activation": 0,
+      "mean_gradient": 73,
+      "gradient_std": 73,
+      "gradient_max": 73,
+      "gradient_min": 70,
+      "gradient_median": 73,
+      "adjusted_lr": 0,
+      "mean_activation": 61,
+      "std_activation": 82,
+      "mean_grad": 70,
+      "std_grad": 73
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "dataset": "deep4ge_v1",
+  "source_url": "https://codeload.github.com/SigmaJahan/deep4ge/zip/1d895afac1985876f289fbcdc2ee56c62f612071",
+  "revision": "1d895afac1985876f289fbcdc2ee56c62f612071",
+  "doi": "10.5281/zenodo.20337241",
+  "dataset_license": "CC-BY-4.0",
+  "archive_sha256": "531bf0aaacd12b579d08b2d30fc61b644850e7d93133701367bf62ef50102743",
+  "manifest_sha256": "a16eba94350f6991770f18a1de079e879cd6cc70c3daa508194e5ec9d455a4a0",
+  "source_examples": 14227,
+  "valid_log_examples": 13980,
+  "retained_examples": 13980,
+  "excluded_invalid_logs": 247,
+  "invalid_log_reasons": {
+    "Epochs must be strictly increasing.": 247
+  },
+  "removed_conflicting_examples": 0,
+  "conflicting_input_patterns": 0,
+  "curve_points": 12,
+  "seed": 42,
+  "labels": [
+    "no_injected_fault",
+    "hyperparameter_fault",
+    "layer_fault",
+    "loss_fault",
+    "activation_fault",
+    "optimization_fault",
+    "weight_fault",
+    "regularization_fault"
+  ],
+  "csv_sha256": {
+    "modeldoctor_train.csv": "c9a263768fe7733699dd05f7975ec782f4dc44b3960ef81481f64a8fdaccf7b2",
+    "modeldoctor_validation.csv": "3437ffb326f2f53a804eeacf1379d7e1e7ff8b587f9684dd8074931a18eb42b1",
+    "modeldoctor_test.csv": "3d648bc1e3dccaa35dbe38da0c9d89fb527dcfd579d83948b4b07e47a5c3c0a5"
+  },
+  "split_method": "source-program groups; identical inputs across programs stay together",
+  "splits": {
+    "train": {
+      "examples": 10014,
+      "source_groups": [
+        "34311586",
+        "37624102",
+        "44164749",
+        "46642627",
+        "48934338",
+        "50201540",
+        "51971180",
+        "52448552",
+        "52782432",
+        "55328966",
+        "59325381",
+        "61553510",
+        "64151679",
+        "64522751",
+        "65376589",
+        "66468006",
+        "66840108",
+        "66952606",
+        "67169344",
+        "67649606",
+        "68061611",
+        "68109005",
+        "68323793",
+        "68716219",
+        "69364684",
+        "69906416",
+        "70178206",
+        "70217712",
+        "70406438",
+        "70777445",
+        "70818269",
+        "70848143",
+        "71494820",
+        "72328867",
+        "72440268",
+        "72795591",
+        "72965428",
+        "73148058",
+        "73457069",
+        "73765263",
+        "77416892"
+      ],
+      "labels": {
+        "activation_fault": 146,
+        "hyperparameter_fault": 1951,
+        "layer_fault": 937,
+        "loss_fault": 1642,
+        "no_injected_fault": 3010,
+        "optimization_fault": 880,
+        "regularization_fault": 177,
+        "weight_fault": 1271
+      }
+    },
+    "validation": {
+      "examples": 1827,
+      "source_groups": [
+        "31880720",
+        "48385830",
+        "50481178",
+        "64634468",
+        "67727890",
+        "68103873",
+        "71351646",
+        "76132850"
+      ],
+      "labels": {
+        "activation_fault": 24,
+        "hyperparameter_fault": 224,
+        "layer_fault": 193,
+        "loss_fault": 306,
+        "no_injected_fault": 637,
+        "optimization_fault": 180,
+        "regularization_fault": 38,
+        "weight_fault": 225
+      }
+    },
+    "test": {
+      "examples": 2139,
+      "source_groups": [
+        "31556268",
+        "50306988",
+        "51981187",
+        "66907936",
+        "67155624",
+        "67590787",
+        "68692047",
+        "71251340",
+        "73146829"
+      ],
+      "labels": {
+        "activation_fault": 142,
+        "hyperparameter_fault": 321,
+        "layer_fault": 204,
+        "loss_fault": 200,
+        "no_injected_fault": 718,
+        "optimization_fault": 180,
+        "regularization_fault": 33,
+        "weight_fault": 341
+      }
+    }
+  },
+  "target_note": "Published baseline/mutation-category labels only; no human-verified explanation or repair targets.",
+  "evaluation_note": "Program-separated mutation benchmark; source labels are not proof of a unique observable cause."
+}

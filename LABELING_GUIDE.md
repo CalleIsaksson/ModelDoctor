@@ -1,5 +1,10 @@
 # ModelDoctor Labeling Guide
 
+This guide belongs to the earlier synthetic experiment. Current Deep4ge targets
+and their limits are documented in [FAULT_LABELING_GUIDE.md](FAULT_LABELING_GUIDE.md).
+The website calls those broad categories investigation areas and supplies
+separate human-written checks; it does not train on the repair advice below.
+
 Here is the guide for which diagnose the SLM should respond with when given a the results from the training and validations sets.
 
 ## overfitting

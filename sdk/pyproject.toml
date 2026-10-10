@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modeldoctor-client"
+version = "0.2.0"
+description = "Local-first training log collection for the ModelDoctor pilot"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["modeldoctor_client*"]

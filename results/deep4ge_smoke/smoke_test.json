@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "production_training": false,
+  "adapter_reload_passed": true,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 6.457764685153961,
+      "validation_loss": 6.487010359764099
+    }
+  ],
+  "source_revision": "1d895afac1985876f289fbcdc2ee56c62f612071"
+}

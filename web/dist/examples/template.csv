@@ -1,0 +1,4 @@
+epoch,train_loss,val_loss,train_acc,val_acc,large_weight_count,acc_gap_too_big,loss_oscillation,dying_relu,gradient_vanish,gradient_explode,decrease_acc_count,increase_loss_count,cons_mean_weight_count,cons_std_weight_count,nan_weight_count,nan_gradients_count,saturated_activation,mean_gradient,gradient_std,gradient_max,gradient_min,gradient_median,adjusted_lr,mean_activation,std_activation,mean_grad,std_grad
+0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -4,3 +4,13 @@ __pycache__/
 models/
 data/lcbench/
 data/*.zip
+data/deep4ge/raw/
+.analysis-deps/
+.web-tools/
+web/.sites-runtime/
+web/.git/
+web/.sites-checkout/
+web/.sites-checkout-*/
+runs/
+sdk/*.egg-info/
+sdk/build/

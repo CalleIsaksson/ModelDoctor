@@ -1,0 +1,8 @@
+torch>=2.5
+transformers>=4.56,<6
+peft>=0.15,<1
+accelerate>=1.0
+tokenizers>=0.21
+safetensors>=0.4
+tqdm>=4.66
+pandas>=2.0

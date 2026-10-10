@@ -1,0 +1,2 @@
+# Prepared CSV checksums must survive checkout on Windows and Linux.
+data/deep4ge/*.csv -text

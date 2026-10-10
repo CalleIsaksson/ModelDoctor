@@ -25,7 +25,7 @@ batch_size = 4
 def load_finetuned_model():
     if not adapter_dir.exists():
         raise FileNotFoundError(
-            "The saved LoRA adapter was not found. Run python train.py first."
+            "The v3 adapter was not found. Run python train_synthetic.py first. For Deep4ge, use python train.py --evaluate-only."
         )
 
     quantization_config = BitsAndBytesConfig(
